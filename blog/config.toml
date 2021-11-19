@@ -2,3 +2,10 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = "Jack Jackson's Blog"
 theme = "ananke"
+
+SectionPagesMenu = "main"
+
+[params]
+  twitter = "https://twitter.com/jacksquaredson"
+  github = "https://github.com/scubbo"
+  linkedin = "https://www.linkedin.com/in/jack-jackson-14a47441/"

@@ -34,6 +34,14 @@ In fact, this was the concept that prompted this post in the first place! The de
 
 (Astute readers will note that I have written several hundred words about making errors before than finding a way to fix the originally-noted issue. Draw your own conclusions.)
 
+# To track down leaks or identify imitators
+
+(EDIT: this section added on 2021-12-26)
+
+A [Canary Trap](https://en.wikipedia.org/wiki/Canary_trap) involves embedding unique identifiers into information given to various parties. If that information is then shared elsewhere, the identifier can be used to determine [who leaked it](https://www.youtube.com/watch?v=JMxkoYAG9r0). For instance, different versions of a screenplay might contain unique typos.
+
+Similarly, when compiling authoritative reference information (such as a dictionary or a map), authors might include [fictious entries](https://en.wikipedia.org/wiki/Fictitious_entry) that do not reflect actual reality. A plagiarist can be identified by the fact that they will copy this fictitious entry.
+
 # As an indicator or prompt to do something important
 
 Famously, Van Halen's concert rider included the request that their dressing room feature a bowl of M&M's with all the brown ones removed. This was derided as posturing rockstars demanding pandering, and could be considered an "error" in the rider that it required unreasonable effort that was not justified by outcome (my effort to remove all the brown M&Ms is going to outweigh your pleasure at being so-coddled) - but there was actually a [good reason for it](https://www.insider.com/van-halen-brown-m-ms-contract-2016-9). The band had one of largest and most complex lighting rigs of the time, which required serious attention to install safely. The bowl of M&M's was a quick indicator - if there are brown M&M's in the bowl, then someone hasn't read the contract carefully, and so they couldn't trust the rest of the setup either.

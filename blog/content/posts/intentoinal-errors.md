@@ -32,7 +32,7 @@ When distributing a tool or framework that accepts parameterization and customiz
 
 In fact, this was the concept that prompted this post in the first place! The default `16rem` `padding-bottom` at the bottom of `main.pb7` in Ananke is, to my eyes, _far_ too large. I started thinking about why an otherwise-well-designed theme might include such a choice (because, of course, my subjective design preferences are objectively and irrefutably correct :P ), and wondered whether this might be the case.
 
-(Astute readers will note that I have written several hundred words about making errors before than finding a way to fix the originally-noted issue. Draw your own conclusions.)
+~~(Astute readers will note that I have written several hundred words about making errors before than finding a way to fix the originally-noted issue. Draw your own conclusions.)~~ (EDIT: 2021-12-26) As of [this commit](https://github.com/scubbo/blogContent/commit/9fbb0014166d848d9ff6e0749db0b513c9a7f586), this issue should be fixed. My solution is perhaps inelegant - the `pb7` class (which is itself a part of the [Tachyon](http://tachyons.io/) framework) is hard-coded in [the theme's base layout](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/3592ce1c03633d9065a82eb7b39479e08a54e64a/layouts/_default/baseof.html#L46), so I had a choice between forking the entire base layout to alter one property, or injecting custom JavaScript to change the css class at page-load. I chose the latter - but I enthusiastically invite suggestions from front-end folks on how else I could have addressed this!
 
 # To track down leaks or identify imitators
 

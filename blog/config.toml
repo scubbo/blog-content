@@ -2,6 +2,7 @@ baseURL = 'https://blog.scubbo.org/'
 languageCode = 'en-us'
 title = "Jack Jackson's Blog"
 theme = "ananke"
+googleAnalytics = "UA-216020156-1"
 
 SectionPagesMenu = "main"
 

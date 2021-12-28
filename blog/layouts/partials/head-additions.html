@@ -1,2 +1,4 @@
 <!-- https://stackoverflow.com/a/70385342/1040915 -->
 <script src="js/custom.js" defer></script>
+<!-- https://mertbakir.gitlab.io/hugo/math-typesetting-in-hugo/ -->
+{{ if .Params.math }}{{ partial "helpers/katex.html" . }}{{ end }}

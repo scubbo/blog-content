@@ -1,5 +1,6 @@
 // https://stackoverflow.com/a/70385342/1040915
 tweakBottomPadding();
+tweakWidth();
 
 function tweakBottomPadding() {
   // The Ananke theme hard-codes `pb7` Tachyon (http://tachyons.io/) class (https://bit.ly/3myqBFy),
@@ -12,7 +13,19 @@ function tweakBottomPadding() {
   if (main.classList.contains('pb7')) {
     main.classList.add('pb5');
     main.classList.remove('pb7');
+    console.log('Reduced bottom-padding');
   } else {
-    console.log('`main` element does not have pb7 class - not replacing it')
+    console.log('`main` element does not have pb7 class - not replacing it');
+  }
+}
+
+function tweakWidth() {
+  var article = document.getElementsByTagName('article')[0];
+  if (article.classList.contains('mw8')) {
+    article.classList.add('mw9');
+    article.classList.remove('mw8');
+    console.log('Widened article element');
+  } else {
+    console.log('`article` element does not have mw8 class - not replacing it');
   }
 }

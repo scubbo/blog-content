@@ -1,6 +1,6 @@
 ---
 title: "2021 in Books"
-date: 2021-12-29T08:29:09-08:00
+date: 2021-12-30T08:29:09-08:00
 ---
 My good friend [George](https://tinyletter.com/altthoughtprocess/) set himself a challenge a while back to read 52 books in a calendar year. He succeeded (as George is wont to do), and that achievement has always stuck in my mind as impressive[^1]. I don't think I'd _ever_ be able to equal it (especially not now, with Work-From-Home removing my most common reading time - the commute), but I did start tracking my reading as a matter of interest. To that end, I present my year-of-reading-in-review, with book-by-book recaps and the [full list]({{< ref "#full-list" >}}) at the end:
 

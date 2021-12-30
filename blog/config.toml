@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = "Jack Jackson's Blog"
 theme = "ananke"
 googleAnalytics = "UA-216020156-1"
+disqusShortname = 'scubbo-blog'
 
 SectionPagesMenu = "main"
 

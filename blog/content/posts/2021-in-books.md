@@ -1,9 +1,9 @@
 ---
 title: "2021 in Books"
-date: 2021-12-17T05:29:09-08:00
-draft: true
+date: 2021-12-29T08:29:09-08:00
 ---
-My good friend [George](https://tinyletter.com/altthoughtprocess/) set himself a challenge a few years ago to read 52 books in a calendar year. He succeeded (as George is wont to do), and that achievement has always stuck in my mind as impressive (as George himself would be the first to point out, quantity does not necessarily imply quality; though, as I recall, the books he read were pretty "worthy", insofar as that's a meaningful descriptor). I don't think I'd _ever_ be able to equal it (especially not now, with Work-From-Home removing my most common reading time - the commute), but I did start tracking my reading as a matter of interest. To that end, I present my year-of-reading-in-review:
+My good friend [George](https://tinyletter.com/altthoughtprocess/) set himself a challenge a while back to read 52 books in a calendar year. He succeeded (as George is wont to do), and that achievement has always stuck in my mind as impressive[^1]. I don't think I'd _ever_ be able to equal it (especially not now, with Work-From-Home removing my most common reading time - the commute), but I did start tracking my reading as a matter of interest. To that end, I present my year-of-reading-in-review, with book-by-book recaps and the [full list]({{< ref "#full-list" >}}) at the end:
+
 
 # Recaps
 
@@ -46,58 +46,106 @@ I can't remember what prompted me to re-read this, but I'm glad that I did. It w
 
 ## Permutation City
 
-More sci-fi, this time from Greg Egan. I'd read and thoroughly enjoyed Diaspora (a _super_ far-future story, which starts with humanity having splintered into three distinct sub-species (variously instantiated in biohacked bodies, androids, and pure machine-code) and develops from there), and this is his work that I see most-highly recommended. It 
+More sci-fi, this time from Greg Egan. I'd read and thoroughly enjoyed Diaspora (a _super_ far-future story, which starts with humanity having splintered into three distinct sub-species (variously instantiated in biohacked bodies, androids, and pure machine-code) and develops from there), and this is his work that I see most-highly recommended. In it, sufficiently-wealthy humans are uploaded into a digital afterlife, but the reliance on costly physical hardware means that the less-wealthy are forced to "after-live" at a lower run rate, only _sampling_ their experience rather than living in real-time.
 
-I preferred Diaspora
+I liked it, but I preferred Diaspora.
+
+The whole premise felt reminiscent of Black Mirror, Stephenson's [Fall; or, Dodge in Hell](https://en.wikipedia.org/wiki/Fall;_or,_Dodge_in_Hell), and the excellent and horrifying short story [Lena](https://qntm.org/mmacevedo) - all of which I consider compliments. The concept of an {{< inlinespoiler >}}infinitely-expanding computation-substrate with built-in scarcity controlled by the founders{{< /inlinespoiler >}} [^2] was probably a wet-dream for crypto-bros, which is marginally distasteful but doesn't itself spoil the actual story.
+
+As with Diaspora, the story relies on some hand-waved quasi-physics to introduce a new source of complexity, adventure, or depth. Diaspora's feels much more feasible than Permutation City's, which is itself lampshaded by the fact that the person suggesting that theory is in-universe regarded as a crackpot. It's here that Permutation City first fell down - I could swallow Diaspora's _Deus Ex Scientia_ as being marginally feasible, and also because it was treated as a genuine point of inquiry ("_OK, if the universe operates like this, then what interesting things happen?_"). PC's felt more like "_I need X to be true in order for the story to progress - therefore it is true_".
+
+The second weak point was characterization. Diaspora was basically character-less: it was more about the concepts and societal and evolutionary pressures involved, with the characters being mere mouthpieces for those ideas - and that's fine! Permutation City tried to make the characters more fleshed out, individual, and sympathetic; and failed.
+
+Not a bad read, by any stretch - but I'll probably re-read Diaspora again, and I doubt I'll re-read this.
+
+## number9dream
+
+I'd read and enjoyed a bunch of David Mitchell ([no, not him](https://www.youtube.com/watch?v=om7O0MFkmpw)) many years ago - he's best-known for [Cloud Atlas](https://en.wikipedia.org/wiki/Cloud_Atlas_(novel)), but for my money [The Bone Clocks](https://en.wikipedia.org/wiki/The_Bone_Clocks) is the best one (I am biased, perhaps, by my preference for books that are the cornerstone of their respective authorial universes (Dark Tower fans, rise up!), and by my pathological rejection of the [inevitability of death](https://www.nickbostrom.com/fable/dragon.html)). I noticed this on my friend Jeff's bookshelf and he kindle lent it to me.
+
+As with Blindsight (though in a different way), it was fine-to-moderately-good, but felt hampered by a lack of narrative. It was certainly evocative and atmospheric, but I can really only recall a single event in the entire book, and the ending in particular felt like massive anti-climax. Perhaps this was a stylistic choice that I'm simply too plebian to understand.
+
+## The Player Of Games // Use Of Weapons
+
+My two favourite books by Iain M. Banks. Conscious that this post's already extremely long, I won't go into detail here - just to say that, if you like Sci-Fi but haven't read Iain M. Banks yet, you really should try him - and either of these is the best starting point (followed by the other one, then probably go on to Excession as your 3rd).
+
+## Elements Of Style
+
+_The_ writing style guide. Having spent so much effort on trying to improve coworkers' writing, I figured I should give this a read. It's certainly showing its age, with some of the recommendations sounding a little fusty nowadays (and the recommendation in the appendix to change email subject every few replies being positively horrifying!), but several good points shine through - particularly, to put modifiers and modificands close together.
+
+## City Of Stairs // City Of Blades
+
+Conscious of the lack of new books on my list so far this year, I looked at a list of "the new best Fantasy" and picked this trilogy (yes, I know...) of "_vast conspiracies, dead gods, and buried histories_". The first book was a gripping spy story coupled with the gradual uncovering of a censored pantheon, with a little historical empire-and-injustice and hints of a King-In-Exile (think Lan, Aragorn, etc. - but more Barbarian than Fighter/Ranger) thrown in for good measure. Unfortunately, the second book lost a lot of the spark of novelty that sustained the first, and I barely slogged through to completing it - in hindsight, I should have stopped a lot earlier.
+
+## Transition
+
+While on a week away in Healdsberg, my partner and I wandered around a bookstore, where I found this - an Iain M. Banks book that I didn't even know existed! As Permutation City reminded me of Fall, so this reminded me of The Bone Clocks - a shadowy supernatural organization that lives among normies and carries out secretive operations. Sadly, this was a weaker book - like number9dream, the narrative just sort-of fizzled out. If you're not going to go full hard sci-fi and actually explore the _physical_ ramifications of your [single change](https://medium.com/@dnlholliday/neuromancer-and-change-everything-science-fiction-2f076a3bdadb) (or emulate Brandon Sanderson and make the system _itself_ interesting), then you need to make the reader care about the story that arises in the _presence_ of that change. I _did_ care about the characters involved - right up until the last act, where it became clear there was going to be no closure for anyone.
+
+## Dune // Dune Messiah
+
+After glorying in the wonderful film adaptation that came out earlier this year, I figured it was time to re-read this series. It's not as good as I remember (_lots_ of repetition, obscure nonsensical verbal jousting and unnecessary mumbo-jumbo), but the bits that are good (philosophy, sociology, big-ass sandworms) are _great_. I'm currently 60% of the way through Children Of Dune, and hoping that this re-read will have me actually finish the series (last time I tapped out after God-Emperor).
+
+## Not listed
+
+I didn't count the comics that I read this year, including [The Mystery Of The Meanest Teacher](https://dc.fandom.com/wiki/The_Mystery_of_the_Meanest_Teacher:_A_Johnny_Constantine_Graphic_Novel) and most of the excellent [Unbeatable Squirrel Girl](https://en.wikipedia.org/wiki/The_Unbeatable_Squirrel_Girl) (all by Ryan North).
 
 # Full list
 
 42 books, of which:
-* 40 fiction, 2 non-fiction (So You Want To Talk About Race?, Elements Of Style)
+* 40 fiction, 2 non-fiction (So You Want To Talk About Race?, Elements Of Style). Of the fiction:
+  * 29 Comic Fantasy (Pratchett)
+  * 9 Sci-Fi (Blindsight, Gnomon, Permutation City, number9dream, 3\*Banks, 2\*Herbert)
+  * 2 Fantasy (City of Stairs/Blades)
 * 41 by men, 1 by a non-man (SYWTTAR?)
-* 41 by white people, 1 by a person of colour (SYWTTAR? - note that I am assuming that Greg Egan is white, though there is famously no picture of him on the Internet **TK** add link)
+* 41 by white people, 1 by a person of colour (SYWTTAR? - note that I am assuming that Greg Egan is white, though there is famously [no picture of him on the Web](http://www.gregegan.net/images/GregEgan.htm))
+* 28 rereads (Pratchett up to Making Money, Gnomon, Iain M. Banks and Frank Herbert books), 14 new reads
 
-Clearly I have a ways to go in addressing these imbalances in 2022!
+Clearly I have a ways to go in addressing these imbalances in 2022! Suggestions welcome.
 
-* Witches Abroad
-* Small Gods
-* Blindsight
-* So You Want To Talk About Race?
-* Gnomon
-* Permutation City
-* Lords And Ladies
-* Men At Arms
-* Soul Music
-* Interesting Times
-* Maskerade
-* Feet Of Clay
-* Hogfather
-* Jingo
-* The Last Continent
-* Carpe Jugulum
-* The Fifth Elephant
-* The Truth
-* Thief Of Time
-* The Amazing Maurice And His Educated Rodents
-* Number 9 Dream
-* Night Watch
-* The Wee Free Men
-* Monstrous Regiment
-* Hat Full Of Sky
-* Going Postal
-* Thud!
-* Wintersmith
-* Making Money
-* Unseen Academicals
-* I Shall Wear Midnight
-* Snuff
-* Raising Steam
-* The Shepherd's Crown
-* The Player Of Games
-* Use Of Weapons
-* Elements Of Style
-* City Of Stairs
-* City Of Blades
-* Transition
-* Dune
-* Dune Messiah
+1. Witches Abroad
+2. Small Gods
+3. Blindsight
+4. So You Want To Talk About Race?
+5. Gnomon
+6. Permutation City
+7. Lords And Ladies
+8. Men At Arms
+9. Soul Music
+10. Interesting Times
+11. Maskerade
+12. Feet Of Clay
+13. Hogfather
+14. Jingo
+15. The Last Continent
+16. Carpe Jugulum
+17. The Fifth Elephant
+18. The Truth
+19. Thief Of Time
+20. The Amazing Maurice And His Educated Rodents
+21. number9dream
+22. Night Watch
+23. The Wee Free Men
+24. Monstrous Regiment
+25. Hat Full Of Sky
+26. Going Postal
+27. Thud!
+28. Wintersmith
+29. Making Money
+30. Unseen Academicals
+31. I Shall Wear Midnight
+32. Snuff
+33. Raising Steam
+34. The Shepherd's Crown
+35. The Player Of Games
+36. Use Of Weapons
+37. Elements Of Style
+38. City Of Stairs
+39. City Of Blades
+40. Transition
+41. Dune
+42. Dune Messiah[^3]
+
+[^1]: As George himself would be the first to point out, quantity does not necessarily imply quality; though, as I recall, the books he read were pretty "worthy", insofar as that's a meaningful descriptor.
+
+[^2]: Spoiler-tagging introduced as [here](http://oostens.me/posts/hugo-inline-spoiler-shortcode/).
+
+[^3]: This was converted from a bulleted list to a numbered one with the following neat vim snippet: `:let i=1 | g/^/s/\* /\=i.'. '/ | let i=i+1`.

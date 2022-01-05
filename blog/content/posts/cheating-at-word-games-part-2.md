@@ -13,4 +13,6 @@ The next step would be to find the pair whose partitioning[^1] gives the greates
 
 That shakes out to recommending the pair of `(soare, clint)`, which has quite a pleasing poetic image of Hawkeye in flight :) now that I have two strategies described ("_always-locally-optimal_" vs. "_guess `soare`, then `clint`, then 🤷_"), I'm looking forward to finding a way to pit them against one another against an automated implementation of the game. I _suspect_ that they'll both reliably "win" in the same number of turns, so I'll either need to score them on their information/entropy properties (and probably have to dig out a textbook to make sure I'm doing that right), or construct some larger dataset for them to compete on.
 
+(Check out the third post in this series [here]({{< ref "/posts/cheating-at-word-games-part-3" >}}))
+
 [^1]: As described in the [previous post]({{< ref "/posts/cheating-at-word-games" >}}), each guess partitions the set of possible solutions into 125 subsets - one for each of the $5^3$ possibilities of `[first letter correct | first letter present | first letter absent] X [second letter correct | second letter present | ...`.

@@ -12,3 +12,4 @@ SectionPagesMenu = "main"
   github = "https://github.com/scubbo"
   linkedin = "https://www.linkedin.com/in/jack-jackson-14a47441/"
   custom_css = ['inlinespoiler.css']
+  show_reading_time = true

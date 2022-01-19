@@ -1,6 +1,8 @@
 ---
 title: "My First Post"
 date: 2021-12-04T11:21:26-08:00
+tags:
+  - metaBlogging
 ---
 In true navel-gazey meta style, the first post on this blog is a description of how I set up the blog.
 <!--more-->

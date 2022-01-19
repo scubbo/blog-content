@@ -2,6 +2,8 @@
 title: "Cheating at Word Games"
 date: 2021-12-28T07:18:24-08:00
 math: true
+tags:
+  - wordle
 ---
 
 The other day, I saw the word game [Wordle](https://www.powerlanguage.co.uk/wordle/) going around on my Twitter feed. The game prompts you to guess a 5-letter word in a [Mastermind](https://en.wikipedia.org/wiki/Mastermind_(board_game))-like style - every letter in your guess is reported as being correct, as present (i.e. that letter occurs somewhere in the answer, but is misplaced), or as absent.

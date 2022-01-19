@@ -13,3 +13,8 @@ SectionPagesMenu = "main"
   linkedin = "https://www.linkedin.com/in/jack-jackson-14a47441/"
   custom_css = ['inlinespoiler.css']
   show_reading_time = true
+
+# That is, explicitly disabling `categories` taxonomy
+# https://gohugo.io/content-management/taxonomies/#example-removing-default-taxonomies
+[taxonomies]
+  tag = 'tags'

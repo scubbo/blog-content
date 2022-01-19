@@ -2,6 +2,8 @@
 title: "Cheating at Word Games: Part 2"
 date: 2021-12-29T08:53:32-08:00
 math: true
+tags:
+  - wordle
 ---
 This is a sequel to my [previous post]({{< ref "/posts/cheating-at-word-games" >}}), where I laid out a Information Theoretical approach to algorithmically solving [Wordle](https://www.powerlanguage.co.uk/wordle/) puzzles.
 <!--more-->

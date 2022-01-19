@@ -1,6 +1,8 @@
 ---
 title: "Cheating at Word Games: Part 3"
 date: 2022-01-05T07:50:29-08:00
+tags:
+  - wordle
 ---
 The third in a series on [Wordle]({{< ref "/posts/cheating-at-word-games" >}}).
 <!--more-->

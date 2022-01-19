@@ -10,7 +10,7 @@ As is my way, I immediately started [thinking](https://twitter.com/jacksquaredso
 
 # Strategy
 
-There is a limited universe of "answer candidates"[^1]. Every time you guess, the set of answer-candidates is divided into (5^3=)125 different partitions, based on the 3 possible states each of the 5 letters in your guess might be in:
+There is a limited universe of "answer candidates"[^1]. Every time you guess, the set of answer-candidates is divided into (3^5=)243 different partitions[^5], based on the 3 possible states each of the 5 letters in your guess might be in:
 * All answers for which all letters in your guess would be entirely incorrect
 * All answers for which the first letter of your guess is present-but-incorrectly-placed, and all other answers in your guess are incorrect
 * All answers for which the first letter of your guess is correct, and all other letters are incorrect
@@ -44,7 +44,7 @@ Therefore, we can maximize the information gained at each guess by picking a gue
 
 # Conclusion
 
-With [this code](https://github.com/scubbo/wordle-solver/blob/25edb74e7d3c7da4b6f5eea80ba22593f5487cab/solver.py), I figured out the best and worst words to start with (lower numbers are better):
+With [this code](https://github.com/scubbo/wordle-solver/blob/300be5bb22ddc0a50fc8b3e761c22f87cb3aadda/solver.py), I figured out the best and worst words to start with (lower numbers are better):
 
 ```
 Computing: [#############################################] 10657/10657
@@ -76,3 +76,5 @@ That said, I would love to do some testing on this strategy, by setting up the i
 [^3]: It’s been a _while_ since I’ve studied Information Theory, so I might be misusing some terms. Please do feel free to correct me if so!
 
 [^4]: LaTeX formatting added to this blog courtesy of [this guide](https://mertbakir.gitlab.io/hugo/math-typesetting-in-hugo/).
+
+[^5]: Thanks to [@fuseboy](https://twitter.com/fuseboy) for pointing out my error of arithmetic here!

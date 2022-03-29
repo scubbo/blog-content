@@ -1,6 +1,8 @@
 ---
 title: "Check Your Backups"
 date: 2021-12-05T12:18:43-08:00
+tags:
+  - homelab
 ---
 I fully intend to write a full blog-post as a follow-up to my [previous post]({{< ref "/posts/my-first-post" >}}) at some point, detailing some of the quirks of this setup and issues that I ran into - but I just got a timely reminder of the importance of checking backups, and wanted to pass it on to you.
 <!--more-->

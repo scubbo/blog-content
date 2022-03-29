@@ -54,7 +54,6 @@ if [[ -z "${booleans['noGit']:-}" ]]; then
 
   git push
 fi
-exit
 
 
 hugo --quiet --source $path
@@ -73,6 +72,9 @@ else
 fi
 
 docker run --name blog_nginx -p 8108:8080 -d scubbo/blog_nginx
+# TODO - call Cloudflare's CDN API to explicitly purge cache on the index page
+# TODO - (more of a stretch) and parse the `git push` output to purge cache on updated pages, too
+# TODO - do the "docker kill and restart" more idiomatically - there must be a "proper" way to do it!
 
 rm -rf blogContent
 

@@ -1,6 +1,8 @@
 ---
 title: "The CrAbs Fallacy"
 date: 2022-04-03T12:25:57-07:00
+tags:
+  - web3
 ---
 First blog post in a long time. This was caused by combination of four things (most of which I hope to address in more detail in following blog posts):
 * My home network starting misbehaving and I was focused more on fixing that than blogging (the first rule of homelabbing - whatever you mess with with, your living partners need to be able to access the Internet, and to work the lights and heating!

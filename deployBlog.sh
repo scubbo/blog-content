@@ -55,7 +55,7 @@ if [[ -z "${booleans['noGit']:-}" ]]; then
   git push
 fi
 
-
+HUGO_ENV=production
 hugo --quiet --source $path
 
 cp -r $path/public ./blogContent

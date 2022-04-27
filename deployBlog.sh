@@ -58,10 +58,10 @@ fi
 HUGO_ENV=production
 hugo --quiet --source $path
 
-cp -r $path/public ./blogContent
+cp -r $path/public ./builtContent
 docker build -t scubbo/blog_nginx . -f-<<EOF
 FROM nginxinc/nginx-unprivileged
-COPY blogContent /usr/share/nginx/html
+COPY builtContent /usr/share/nginx/html
 EOF
 
 if [[ $(docker ps --filter "name=blog_nginx" | wc -l) -lt 2 ]]; then
@@ -75,6 +75,7 @@ docker run --name blog_nginx -p 8108:8080 -d scubbo/blog_nginx
 # TODO - call Cloudflare's CDN API to explicitly purge cache on the index page
 # TODO - (more of a stretch) and parse the `git push` output to purge cache on updated pages, too
 # TODO - do the "docker kill and restart" more idiomatically - there must be a "proper" way to do it!
+# ...it's probably k8s, isn't it :)
 
-rm -rf blogContent
+rm -rf builtContent
 

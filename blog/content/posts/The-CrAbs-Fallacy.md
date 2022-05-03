@@ -6,7 +6,7 @@ tags:
 ---
 First blog post in a long time. This was caused by combination of four things (most of which I hope to address in more detail in following blog posts):
 * My home network starting misbehaving and I was focused more on fixing that than blogging (the first rule of homelabbing - whatever you mess with with, your living partners need to be able to access the Internet, and to work the lights and heating!
-* I finally took the plunge in moving this blog from fully AWS-hosted to self-hosted.
+* I finally took the plunge in moving this blog from fully AWS-hosted to self-hosted (EDIT: blog post [here]({{< ref "/posts/self-hosting-blog" >}})).
 * I got Laser Eye Surgery and was recovering from that (probably won't be blogging about that, not much more to say!).
 * I started writing a post to articulate my confusions or uncertainties about web3, with the intention of understanding it better.
 <!--more-->

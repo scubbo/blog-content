@@ -57,20 +57,25 @@ fi
 
 hugo --quiet --source $path
 
+docker_image_tag="scubbo/blog_nginx"
+docker_instance_name="blog_nginx"
+
 cp -r $path/public ./builtContent
-docker build -t scubbo/blog_nginx . -f-<<EOF
+docker build -t $docker_image_tag . -f-<<EOF
 FROM nginxinc/nginx-unprivileged
 COPY builtContent /usr/share/nginx/html
 EOF
 
-if [[ $(docker ps --filter "name=blog_nginx" | wc -l) -lt 2 ]]; then
+if [[ $(docker ps --filter "name=$docker_instance_name" | wc -l) -lt 2 ]]; then
   echo "No currently running blog"
 else
-  docker kill blog_nginx
-  docker rm blog_nginx
+  docker kill $docker_instance_name
+  docker rm $docker_instance_name
 fi
 
-docker run --name blog_nginx -p 8108:8080 -d scubbo/blog_nginx
+docker run --name $docker_instance_name -p 8108:8080 \
+    --mount type=bind,source="$(pwd)"/default.conf,target=/etc/nginx/conf.d/default.conf \
+    -d $docker_image_tag
 # TODO - call Cloudflare's CDN API to explicitly purge cache on the index page
 # TODO - (more of a stretch) and parse the `git push` output to purge cache on updated pages, too
 # TODO - do the "docker kill and restart" more idiomatically - there must be a "proper" way to do it!

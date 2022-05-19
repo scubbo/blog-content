@@ -1,0 +1,33 @@
+kind: pipeline
+name: hello-world
+type: docker
+
+platform:
+  os: linux
+  arch: arm64
+
+steps:
+  - name: build-blog
+    image: alpine
+    # Very unlikely to need updates, and pulling images seems slow on this setup -
+    # can manually reset this if necessary
+    pull: if-not-exists
+    commands:
+      # I considered caching this install in a pre-built image in registry,
+      # but the install seems pretty quick!
+      - apk add hugo git
+      - git submodule init
+      - git submodule update --recursive
+      - hugo --source blog
+      - |-
+        cat << EOF > Dockerfile
+        FROM nginxinc/nginx-unprivileged
+        COPY blog/public /usr/share/nginx/html
+        EOF
+  - name: push-built-image
+    image: plugins/docker
+    settings:
+      debug: true
+      repo: rassigma.avril:5000/scubbo/blog_nginx
+      tags: built_in_ci
+      insecure: true

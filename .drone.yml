@@ -44,6 +44,13 @@ steps:
       - ./kubectl config set-context default --cluster=default --user=default
       - ./kubectl config use-context default
       - ./kubectl apply -f kubernetes-resources.yml
+      # This next line wouldn't be necessary if new tags were generated for each image
+      # (though then I'd have to dynamically plumb them into the yml file)
+      # TODO - research if there's a better way to do this. Note that this isn't done
+      # in the `honestbee` repo that I copied from - but I confirmed by `curl`-ing localhost
+      # that simply applying the yml leaves the definitions and the service's output
+      # unchanged, despite `imagePullPolicy: 'Always'`
+      - ./kubectl rollout restart deployment/blog-deployment
     environment:
       kubernetesServer:
         from_secret: k8s_server

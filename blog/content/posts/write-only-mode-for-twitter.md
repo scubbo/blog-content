@@ -1,6 +1,8 @@
 ---
 title: "Write Only Mode for Twitter"
 date: 2022-05-08T12:45:44-07:00
+tags:
+  - MentalHealth
 ---
 A few weeks ago, I decided to step back from using Twitter so actively. There are certainly a lot of good things about Twitter - it's entertaining and informative - but, from a mindset of [Digital Minimalism](https://www.calnewport.com/books/digital-minimalism/), I could not honestly say that it was doing me more good than harm.
 <!--more-->

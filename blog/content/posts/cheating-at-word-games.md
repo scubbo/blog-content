@@ -21,7 +21,7 @@ There is a limited universe of "answer candidates"[^1]. Every time you guess, th
 
 This might be easier to understand with the following diagram:
 
-![Wordle-Partioning](/Wordle-partitioning.drawio.png)
+![Wordle-Partioning](/img/Wordle-partitioning.drawio.png)
 
 
 (Examples generated with [this script](https://github.com/scubbo/wordle-solver/blob/main/example_generator.py))

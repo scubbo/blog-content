@@ -4,7 +4,7 @@ date: 2022-05-30T13:00:39-07:00
 tags:
   - MentalHealth
 ---
-A few days ago, I hit a 100-day streak of meditating using the [Ten Percent Happier](https://www.tenpercent.com/) app.
+A few days ago, I hit a 100-day streak of meditating using the [Ten Percent Happier app](https://www.tenpercent.com/).
 
 <!--more-->
 ![100-day-streak](/img/100_days_meditation_streak.jpg)

@@ -6,6 +6,12 @@ disqusShortname = 'scubbo-blog'
 
 SectionPagesMenu = "main"
 
+[menu]
+[[menu.main]]
+  identifier = 'tags'
+  name = 'Tags'
+  url = '/tags/'
+
 [params]
   twitter = "https://twitter.com/jacksquaredson"
   github = "https://github.com/scubbo"

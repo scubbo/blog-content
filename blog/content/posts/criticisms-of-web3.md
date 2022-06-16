@@ -12,6 +12,8 @@ I'm writing this post primarily to articulate the questions for myself, to state
 
 Most of these questions assume that the project aims to reach some critical mass of size. This is a particularly reasonable assumption for projects that have a social component (there's no point posting on a social network if your friends aren't there!), but also applies to general economic considerations.
 
+Many thanks to my proof-readers [Éamon](https://twitter.com/cloudycelt) and [George](https://www.georgelockett.com/), who identified a common theme of these questions - "_How are you planning on solving the non-technical sides of the problem (i.e. those that are primarily economic or socio-political)?_"
+
 # Questions
 
 ## Soft Questions
@@ -88,7 +90,7 @@ So - you need features in order to attract customers, and you need a _lot_ of fe
 * those investors will expect a return on their investment
 
 This is not a problem that's unique to web3-based services, by any stretch! "_Launch fast with a compelling offering, acquire a critical base of customers, then pivot to profitability_" is a tried-and-true Silicon Valley strategy. However, it may be a little more difficult to sustain when two key pillars of your offering are:
-* privacy - which precludes you from two key sources of income that don't come out of your customers' wallets; ads, and selling customer data.
+* privacy - which precludes you from two key sources of income that don't come out of your customers' wallets; personalized ads, and selling customer data.
 * low-friction of migration between services - so, you cannot rely on economic moats; your service will live or die on whether its features are better than a competitor's.
 
 At the risk of repeating myself - this is not a fatal gotcha! There are certainly imaginable ways that a web3 service could navigate these requirements, by building features that attract and retain customers while achieving profitability. But this certainly seems like a harder product problem in a space where you cannot profit indirectly from customers, and where the friction of moving to a competitor is low.
@@ -113,11 +115,11 @@ Note that this question is related both to ["Why would real-world authorities re
 
 ### Why do you need a blockchain/decentralization for this? Does portability/scarcity even make sense?
 
-Don't get me wrong - [blockchains](https://en.wikipedia.org/wiki/Blockchain) are fascinating data structures, with many interesting and potentially-useful properties. But they're also overkill if you don't _need_ or benefit-from those properties. Similarly, the ability to represents ownership on a distributed ledger in a system-agnostic way is very cool - but, if your use-cases only ever include transferring ownership within systems owned by your own company, you have just introduce a _ton_ of complexity to achieve an outcome that is indistinguishable from "_a row in a traditional database_".
+Don't get me wrong - [blockchains](https://en.wikipedia.org/wiki/Blockchain) are fascinating data structures, with many interesting and potentially-useful properties. But they're also overkill if you don't _need_ or benefit-from those properties. Similarly, the ability to represent ownership on a distributed ledger in a system-agnostic way is very cool - but, if your use-cases only ever include transferring ownership within systems owned by your own company, you have just introduce a _ton_ of complexity to achieve an outcome that is indistinguishable from "_a row in a traditional database_".
 
 # Conclusion
 
-To repeat - my articulation of these questions does not mean that I think that web3 is doomed, nor that I inherently oppose it. I responate with many of the ideals professed by many web3 projects, and I really hope that projects exist that can answer these questions and provide value to users while avoiding significant environmental impact. This article is a framework for evaluating common flaws in proposals, _not_ a comprehensive takedown of all of web3.
+To repeat - my articulation of these questions does not mean that I think that web3 is doomed, nor that I inherently oppose it. I resonate with many of the ideals professed by many web3 projects, and I really hope that projects exist that can answer these questions and provide value to users while avoiding significant environmental impact. This article is a framework for evaluating common flaws in proposals, _not_ a comprehensive takedown of all of web3.
 
 [^1]: Definitions are nebulous and various, so for this purposes I'm categorizing web3 as "_any project which opposes or inverts the monopolistic power of web service providers, by decentralizing components, reducing lock-in, increasing competition and portability, and/or increasing privacy and control of data_". So, by this definition, cryptocurrencies and blockchains _aren't_ inherently part of web3, though they might be used _in_ a web3 system.
 [^2]: In contrast to most cryptocurrency-forward systems, which seem intent on the commodification of, and insertion of artificial scarcity into, almost everything ([Eevee](https://twitter.com/eevee) had a _great_ tweet about this that I can't now find, elaborating that the reason she's so opposed to crypto/web3/NFTs is that they're all about introducing scarcity to a digital space, the one place where it makes _no_ sense to exist - these [two](https://twitter.com/eevee/status/1467829679369326594) [threads](https://twitter.com/eevee/status/1460357576906850306) aren't it, but echo the sentiment). I'm generalizing - profiteering web3 projects and abundance-minded crypto projects both probably exist - but these are the themes I've noticed.

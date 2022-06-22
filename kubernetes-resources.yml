@@ -8,6 +8,7 @@ spec:
     role: app
   ports:
    - port: 8080
+     nodePort: 30080
   type: LoadBalancer
 ---
 apiVersion: apps/v1

@@ -7,6 +7,23 @@ platform:
   arch: arm64
 
 steps:
+  - name: copy-cert-into-place
+    image: busybox
+    volumes:
+      - name: docker-cert-persistence
+        path: /etc/docker/certs.d/
+    commands:
+      # https://stackoverflow.com/questions/72823418/how-to-make-drone-docker-plugin-use-self-signed-certs
+      - mkdir -p /etc/docker/certs.d/docker-registry.scubbo.org:8843
+      - cp /registry_cert.crt /etc/docker/certs.d/docker-registry.scubbo.org:8843/ca.crt
+  - name: check-cert-persists-between-stages
+    image: alpine
+    volumes:
+      - name: docker-cert-persistence
+        path: /etc/docker/certs.d/
+    commands:
+      - apk add curl
+      - curl https://docker-registry.scubbo.org:8843/v2/_catalog --cacert /etc/docker/certs.d/docker-registry.scubbo.org:8843/ca.crt
   - name: build-blog
     image: alpine
     # Very unlikely to need updates, and pulling images seems slow on this setup -
@@ -21,10 +38,14 @@ steps:
       - hugo --source blog
   - name: push-built-image
     image: plugins/docker
+    volumes:
+      - name: docker-cert-persistence
+        path: /etc/docker/certs.d/
     settings:
-      repo: rassigma.avril:5000/scubbo/blog_nginx
+      repo: docker-registry.scubbo.org:8843/scubbo/blog_nginx
       tags: built_in_ci
-      insecure: true
+      debug: true
+      launch_debug: true
   - name: update_blog_deployment
     # I've tried using https://github.com/sinlead/drone-kubectl and
     # https://github.com/honestbee/drone-kubernetes, but neither is built for arm64
@@ -58,3 +79,6 @@ steps:
         from_secret: k8s_cert
       kubernetesToken:
         from_secret: k8s_token
+volumes:
+  - name: docker-cert-persistence
+    temp: {}

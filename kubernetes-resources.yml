@@ -29,6 +29,10 @@ spec:
         role: app
     spec:
       containers:
+      # Guidance on how to set up interaction with secure registry:
+      # https://github.com/k3s-io/k3s/issues/1148#issuecomment-641687668
+      # (Unique to rancher/k3s. On traditional k8s installs, I suspect https://github.com/kubernetes/kubernetes/issues/43924
+      # is the way)
       - name: app
         image: "docker-registry.scubbo.org:8843/scubbo/blog_nginx:built_in_ci"
         imagePullPolicy: 'Always'

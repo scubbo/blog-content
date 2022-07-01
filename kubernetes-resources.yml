@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: "docker-registry.avril/scubbo/blog_nginx:built_in_ci"
+        image: "docker-registry.scubbo.org:8843/scubbo/blog_nginx:built_in_ci"
         imagePullPolicy: 'Always'
         resources:
           requests:

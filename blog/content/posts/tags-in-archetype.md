@@ -33,6 +33,33 @@ On the topic of tags, I have a couple of improvements I want to introduce:
   * I'd like to try messing with the ordering[^4] on that tags page, too. At a glance, it looks like it's sorting by "_most recent post within that tag_", which...I guess makes sense. My first thought was that ordering by "_number of posts in tag_" might make more sense (putting "larger" tags above smaller ones), but that might lead to discoverability problems if I write a bunch of posts under one tag and then it's harder to find later ones. Then again, later posts would presumably show up on the standard page anyway? Eh - that's Future-Jack's problem when he starts thinking about this problem (if, indeed, he ever does...)
 * It seems like the "related" sidebar only ever shows previous content - [this post](https://blog.scubbo.org/posts/cheating-at-word-games-part-3/) shows the two preceding posts under the tag, but [this one](https://blog.scubbo.org/posts/cheating-at-word-games/) doesn't show any. That's both puzzling (the full list of "_posts that exist under a given tag_" must be available at _some_ point in the build process, and it's not like running a second iteration over all blog posts will massively affect runtime efficiency of the process) and counter-intuitive (a reader who is linked to the first blog post in a series would want to be able to easily find a link to the next one without clicking out to the tag page or the author explicitly adding the link in the body). This _should_ be pretty simple to solve by using a [Taxonomy Template](https://gohugo.io/templates/taxonomy-templates/#list-content-with-the-same-taxonomy-term), but I'd be more curious to find out why this wasn't implemented the _complete_ way to begin with.
 
+---
+
+**EDIT:** well, there's an easy-ish solution to including newer content in the Related Items sidebar. Turns out it was simple as changing a single value - `related.includeNewer` - in Hugo's configuration, as described [here](https://gohugo.io/content-management/related/).  Unfortunately, "_If you add a_ `related` _config section, you need to add a complete configuration. It is not possible to just set, say,_ `includeNewer` _and use the rest from the Hugo defaults._", so I had to copy the entire default configuration and change a single value in it. The fact that that config option is specifically called out as the example suggests that this is a common non-default configuration - I am vindicated! The justification given in documentation for the default option is that including newer related content "_will mean that the output for older posts may change as new related content gets added_", which I _guess_ could be considered as unexpected behaviour if you expect a post to remain immutable once published.
+
+However, the resultant Related Pages are (presumably) listed in order of "most-to-least-related" (with order undefined between pages that are equally-related) - or, at least, I can say that they're not listed in a consistent date order, because during testing, the related pages for the [2nd Wordle post]({{< ref "/posts/cheating-at-word-games-part-2" >}}) listed 1 then 3, but the related pages for the 3rd post listed 2 then 1. The sort-order for the Related Pages isn't a configurable option, so, in order to change this, I had to override [Ananke's default layout for sidebar content](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/master/layouts/partials/menu-contextual.html) - I changed:
+
+```
+{{ $related := .Site.RegularPages.Related . | first 15 }}
+
+{{ with $related }}
+...rendering of each item of $related
+```
+
+to
+
+```
+{{ $related := .Site.RegularPages.Related . | first 15 }}
+{{ $related_sorted := sort $related "Date" "desc"}}
+
+{{ with $related_sorted }}
+...rendering of each item of $related_sorted
+...
+```
+
+So far as I can tell, it's not possible to pipe _into_ `sort`, you have to have it return to a new variable.
+
+
 [^0]: These links are permalinks to a previous commit, because as part of the commit that introduces _this_ post, I unified those disparate tags to a single `#meta` tag.
 [^1]: Disclaimer: computers will almost always introduce more problems than they solve. The only code that is guaranteed to lead not to lead to a net-increase of problems is [this](https://github.com/kelseyhightower/nocode).
 [^2]: Confusingly, "Archetypes" do what you might naïvely expect "Templates" to do. Explicitly: Archetypes are ~~templates~~ prototypes from which new content are created, and Templates are ways to express code-like logic in a non-code context, or equivalently to provide an execution/extension point in non-code content that expresses "_execute some code, and insert the output here_". An example of a template is writing the following in a blog post (note that this is not legal template syntax!): "_If you're interested in learning more about this topic, check the following posts: `{{ getAllPostsWithTag "coolTopic" | .Title}}`_", to print the titles of all posts with tag `#coolTopic`.

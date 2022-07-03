@@ -1,0 +1,39 @@
+{{/*
+  Copied and adapted from Ananke theme's implementation, initially in order to enforce date-ordering on Related Pages:
+  https://blog.scubbo.org/posts/tags-in-archetype/
+*/}}
+{{/*
+  Use Hugo's native Table of contents feature. You must set `toc: true` in your parameters for this to show.
+  https://gohugo.io/content-management/toc/
+*/}}
+
+{{- if .Params.toc -}}
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">{{ i18n "whatsInThis" . }}</p>
+      {{ .TableOfContents }}
+  </div>
+{{- end -}}
+
+{{/*
+  Use Hugo's native related content feature to pull in content that may have similar parameters, like tags. etc.
+  https://gohugo.io/content-management/related/
+*/}}
+
+{{ $related := .Site.RegularPages.Related . | first 15 }}
+{{/* So far as I can tell, it's not possible to pipe _into_ sort - it needs to return */}}
+{{ $related_sorted := sort $related "Date" "desc"}}
+
+{{ with $related_sorted }}
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">{{ i18n "related" }}</p>
+    <ul class="pa0 list">
+       {{ range . }}
+         <li  class="mb2">
+          <a href="{{ .RelPermalink }}">
+            {{- .Title -}}
+          </a>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}

@@ -24,3 +24,20 @@ SectionPagesMenu = "main"
 # https://gohugo.io/content-management/taxonomies/#example-removing-default-taxonomies
 [taxonomies]
   tag = 'tags'
+
+# https://gohugo.io/content-management/related/
+# https://blog.scubbo.org/posts/tags-in-archetype/
+# `includeNewer = true` => include pages that are newer than the current page in the "Related" sidebar
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+[[related.indices]]
+  name = 'keywords'
+  weight = 100
+[[related.indices]]
+  name = 'tags'
+  weight = 80
+[[related.indices]]
+  name = 'date'
+  weight = 10

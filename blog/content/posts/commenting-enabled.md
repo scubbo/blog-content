@@ -2,7 +2,7 @@
 title: "Commenting Enabled"
 date: 2021-12-30T06:31:00-08:00
 tags:
-  - metaBlogging
+  - meta
 ---
 If everything has worked as expected, comments should now be enabled on this blog via Disqus. Don't make me regret that. Ensure that your comments pass through the [Three Gates](https://medium.com/zen-pills/the-3-gates-of-speech-305eaaa999c9) - they should be true, necessary, and kind. If you want to espouse homophobia, transphobia, racism, fascism, anti-vax, or anything similar, you are not welcome here. Black Lives Matter, Trans Rights Are Human Rights.
 

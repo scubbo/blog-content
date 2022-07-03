@@ -3,7 +3,8 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
 tags:
-  - FillInTagHere
+{{ range .Site.Taxonomies.tags }}  - {{ .Page.Title }}
+{{ end }}
 ---
 This is the introduction
 <!--more-->

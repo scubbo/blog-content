@@ -15,7 +15,16 @@ pushd blog > /dev/null
 
 hugo new "posts/$postName.md"
 outputLocation="content/posts/$postName.md"
-if [ -n "$EDITOR" ]; then
+# Use our own env variable to encode which editor
+# should be used to edit blogposts. Setting $VISUAL
+# to `subl` leads to it also being used by (among
+# others) zsh's `edit-command-line`, which is
+# undesired
+if [ -n "$BLOG_EDITOR" ]; then
+  $BLOG_EDITOR $outputLocation
+elif [ -n "$VISUAL" ]; then
+  $VISUAL $outputLocation
+elif [ -n "$EDITOR" ]; then
   $EDITOR $outputLocation
 else
   echo "No default editor set - falling back to Sublime"

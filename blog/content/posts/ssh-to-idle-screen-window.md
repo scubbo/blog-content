@@ -31,7 +31,7 @@ Translated into shell code, that looks like:
 Host host_nickname
   HostName hostname.avril
   RequestTTY force
-  RemoteCommand sessionName=main; sessionSocket=$(ls /run/screen/S-pi | grep -E "^[[:digit:]]+\.$sessionName$"); if [ -z "$sessionSocket" ]; then screen -S "$sessionName"; else idleWindows=$(pgrep -P $(echo "$sessionSocket" | cut -d "." -f1) | xargs -I {} sh -c "echo -n '{}:'; pgrep -P {} | tr '\n' ':'; echo" | grep -E -v ':[[:digit:]]' | sed -n 's/:$//p'); if [ -z "$idleWindows" ]; then screen -D -RR -S "$sessionName" -p +; else screen -D -RR -S "$sessionName" -p $(tr '\0' '\n' </proc/$(echo $idleWindows | cut -d ' ' -f1)/environ | grep ^WINDOW= | cut -d '=' -f2);fi;fi
+  RemoteCommand sessionName=main; sessionSocket=$(ls /run/screen/S-pi | grep -E "^[[:digit:]]+\.$sessionName$"); if [ -z "$sessionSocket" ]; then screen -S "$sessionName"; else idleWindows=$(pgrep -P $(echo "$sessionSocket" | cut -d "." -f1) | xargs -I {} sh -c "echo -n '{}:'; pgrep -P {} | tr '\n' ':'; echo" | grep -E -v ':[[:digit:]]' | sed -n 's/:$//p'); if [ -z "$idleWindows" ]; then screen -D -RR -S "$sessionName" -p +; else screen -D -RR -S "$sessionName" -p $(tr '\0' '\n' </proc/$(echo $idleWindows | tr '\n' ' ' | cut -d ' ' -f1)/environ | grep ^WINDOW= | cut -d '=' -f2);fi;fi
 ```
 
 OK, that's....that's pretty gross. Let's break it down.
@@ -70,11 +70,12 @@ We're nearly done!
 
 ## Open screen to appropriate window
 
-`if [ -z "$idleWindows" ]; then screen -D -RR -p +; else screen -D -RR -p $(tr '\0' '\n' </proc/$(echo $idleWindows | cut -d ' ' -f1)/environ | grep ^WINDOW= | cut -d '=' -f2);fi`[^3]:
+`if [ -z "$idleWindows" ]; then screen -D -RR -p +; else screen -D -RR -p $(tr '\0' '\n' </proc/$(echo $idleWindows | tr '\n' ' ' | cut -d ' ' -f1)/environ | grep ^WINDOW= | cut -d '=' -f2);fi`[^3]:
 
 * `if [ -z "$idleWindows" ]; then ...` - if the `$idleWindows` variable is empty, then:
   * `screen -D -RR -S "$sessionName" -p +` - open a new window (`-p +`) in session `$sessionName` and attach to it. Else (if the `$idleWindows` variable isn't empty)...
-  * ...`screen -D -RR -S "$sessionName" -p $(tr '\0' '\n' </proc/$(echo $idleWindows | cut -d ' ' -f1)/environ | grep ^WINDOW= | cut -d '=' -f2)` - the file `/proc/<processId>/environ` contains the environment variables of that process. From that, we can `grep` out the `WINDOW` variable (which is just a 0-indexed number), then `cut` it, to provide the value to pass to `-p` in the screen command (thanks again to the example in [this SO question](https://unix.stackexchange.com/questions/556594/how-do-i-find-what-process-is-running-in-a-particular-gnu-screen-window)!).
+  * ...`screen -D -RR -S "$sessionName" -p $(tr '\0' '\n' </proc/$(echo $idleWindows | tr '\n' ' ' | cut -d ' ' -f1)/environ | grep ^WINDOW= | cut -d '=' -f2)` - the file `/proc/<processId>/environ` contains the environment variables of that process. From that, we can `grep` out the `WINDOW` variable (which is just a 0-indexed number), then `cut` it, to provide the value to pass to `-p` in the screen command (thanks again to the example in [this SO question](https://unix.stackexchange.com/questions/556594/how-do-i-find-what-process-is-running-in-a-particular-gnu-screen-window)!).
+    * EDIT: When I first implemented this, `$idleWindows` showed up as a space-delimited variable, so I could just do `echo $idleWindows | cut -d ' ' -f1`. The next day (after, AFAIK, no changes on my Raspberry Pi), it showed up as (as-expected) newline-delimited. Rather than figure out the inconsistency, I added in a `tr '\n' ' '` to coerce both cases into a standard form. ☆☆☆ _SOFTWARE ENGINEERING_ ☆☆☆
 
 # This is a travesty, why would you do this?
 

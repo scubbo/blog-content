@@ -8,6 +8,8 @@ Part of the self-hosted setup that supports this blog (along with all my other h
 <!--more-->
 (To be clear, this was almost entirely unnecessary. The registry will never be exposed outside my own private network, so security measures are _basically_ unnecessary as a threat model that includes attackers getting inside the network probably has bigger things to worry about than intercepting the image registry. But _most_ of my homelab work is impractical and done only for satisfaction and learning, so why should this be any different?)
 
+**EDIT:** actually, as of [Gitea v1.17.0](https://github.com/go-gitea/gitea/releases/tag/v1.17.0), this is even _more_ unnecessary, because Gitea comes bundled with a Container Registry (hat-tip to [Éamon](https://twitter.com/cloudycelt/) for letting me know!). I'll leave the write-up available in case it's useful to anyone (including myself) in the future, though.
+
 There were four steps to getting this working - creating the certificates themselves, enabling their use in the registry, enabling secure upload _to_ the registry, and enabling secure download _from_ it.
 
 ## Creating certificates

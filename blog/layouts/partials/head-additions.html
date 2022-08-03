@@ -1,8 +1,13 @@
+{{ if .Params.extraHeadContent }}
+  {{ range .Params.extraHeadContent }}
+{{ . | safeHTML }}
+
+  {{ end }}
+{{ end }}
 <!-- https://stackoverflow.com/a/70385342/1040915 -->
 <script src="/js/custom.js" defer></script>
 <link rel="stylesheet" href="/css/custom.css">
 <!-- https://mertbakir.gitlab.io/hugo/math-typesetting-in-hugo/ -->
 {{ if .Params.math }}{{ partial "helpers/katex.html" . }}{{ end }}
-<!-- Tracking by self-hosted Plausible. TODO - respect opt-out -->
 <script defer data-domain="blog.scubbo.org" src="https://tracking.scubbo.org/js/plausible.js"></script>
 

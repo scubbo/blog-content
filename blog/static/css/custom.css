@@ -18,3 +18,7 @@ section.footnotes > *:first-child::before {
   color: #444;
   font-size: 25px;
 }
+
+div.tracking-notification.div {
+  color: darkgrey;
+}

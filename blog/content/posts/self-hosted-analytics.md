@@ -94,7 +94,7 @@ You can see the commit that introduced this application to my Kubernetes cluster
 
 A lot of the issues that I tripped over when setting up Plausible on Kubernetes were either due to images not being available for ARM64, or due to my own lack of knowledge with Kubernetes. In hindsight, the whole process was pretty straightforward and simple.
 
-I haven't yet enabled "opt-out" functionality - Plausible have a [simple walkthrough](https://plausible.io/docs/excluding-localstorage) of how to do this, but I've been writing this post for 3.5 hours and I should probably get some sleep :P it does seem that Plausible does not respect the [Do Not Track header](https://www.eff.org/issues/do-not-track), though with [pretty justifiable reasons](https://github.com/plausible/analytics/discussions/646).
+Plausible also has a [drop-in page](https://plausible.io/docs/excluding-localstorage#allow-anyone-on-your-site-to-exclude-themselves) to let users opt-out of tracking - I've implemented it [here](/tracking_info). It does seem that Plausible does not respect the [Do Not Track header](https://www.eff.org/issues/do-not-track), though with [pretty justifiable reasons](https://github.com/plausible/analytics/discussions/646).
 
 [^1]: Well, actually, "bare" Kubernetes will not do this by default, you need a DNS Add-on - but this apparently comes bundled by default with most Kubernetes installations, including [Rancher](https://rancher.com/products/rancher) which is what I'm currently using.
 [^2]: I'm not sure if "resource" is the correct term to use, here. I know it's true for any Pod/Container, but I'm not sure if there are other types of resource that would care about DNS _other_ than those.

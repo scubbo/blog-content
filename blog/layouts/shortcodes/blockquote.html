@@ -1,0 +1,2 @@
+<!-- https://discourse.gohugo.io/t/retain-line-breaks-in-plain-text-paragraph/605 -->
+<blockquote>{{- replace .Inner "\n" "<br/>" | safeHTML -}}</blockquote>

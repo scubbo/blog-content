@@ -1,6 +1,7 @@
 ---
 title: "T​K Block"
 date: 2022-08-23T21:46:40-07:00
+draft: true
 tags:
   - meta
 
@@ -19,7 +20,7 @@ In the traditional publishing world, an Editor would be responsible for the fina
 
 Watch this space. I want the original commit to _only_ include the `.drone.yml` update and minimal blog post, to check it works. I'll post a follow-up with description of alerting (via Matrix) next.
 
-If you're seeing this, then congratulations, you caught the blog post before it was meant to be published. But wait...this whole blog post was about how we'd now made that impossible, right? That's right! TK! TK!
+If you're seeing this, then congratulations, you caught the blog post before it was meant to be published. But wait...this whole blog post was about how we'd now made that impossible, right? That's right!
 
 ## Wait, but...this blog contains the characters T​K?
 

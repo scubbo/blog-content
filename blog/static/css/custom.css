@@ -22,3 +22,13 @@ section.footnotes > *:first-child::before {
 div.tracking-notification.div {
   color: darkgrey;
 }
+
+/*
+  Color only code that exists in prose, not block-code
+  https://stackoverflow.com/a/14900779/1040915
+*/
+:not(pre) > code {
+  font-family: Courier,monospace;
+  background-color: lightgray;
+}
+

@@ -7,30 +7,30 @@ platform:
   arch: arm64
 
 steps:
-  - name: block-posts-containing-tk
-    image: busybox
-    commands:
-      # This is necessary because, if `grep ...` doesn't find anything, it will _return_ (not print) a value of 1
-      # (non-zero return codes indicating errors in Unix - since there are many more ways for something to go wrong
-      # than there are for it to go right!), and so the `files=` assignment will also return 1, and the whole operation
-      # will be considered a failure.
-      #
-      # Since a non-zero value is truthy in Linux, we can use the OR operator (`||`) to only execute the second command
-      # if the first one errors out. So, this line can be translated to English as:
-      # "Set the variable `files` to a list of all the files that contain `TK` - unless there aren't any, in which case
-      # set it to `FILES NOT FOUND"
-      - files=$(grep -rl 'TK' blog/content/posts || echo "FILES NOT FOUND")
-      # We have to filter out (`grep -v`) the "marker" value of `FILES NOT FOUND`, otherwise the no-matches case would
-      # be recorded as having 1 matching file, leading to an error-out below.
-      # (I guess _technically_ there's an edge case in that, if I ever make a blog post titled "FILES NOT FOUND" _which also_
-      # contains the string `TK`, it would slip through this check. But that feels pretty unlikely - not least because spaces
-      # are very rare in my filesystem names - so I'm ok taking that risk)
-      - count=$(wc -l <(echo "$files" | grep -v "FILES NOT FOUND") | awk '{print $1}')
-      - if [[ "$count" -gt "0" ]]; then
-      -   echo "Found TK in $count files:"
-      -   echo $files
-      -   exit 1 # TODO - and alerting via Matrix!
-      - fi
+#  - name: block-posts-containing-tk
+#    image: busybox
+#    commands:
+#      # This is necessary because, if `grep ...` doesn't find anything, it will _return_ (not print) a value of 1
+#      # (non-zero return codes indicating errors in Unix - since there are many more ways for something to go wrong
+#      # than there are for it to go right!), and so the `files=` assignment will also return 1, and the whole operation
+#      # will be considered a failure.
+#      #
+#      # Since a non-zero value is truthy in Linux, we can use the OR operator (`||`) to only execute the second command
+#      # if the first one errors out. So, this line can be translated to English as:
+#      # "Set the variable `files` to a list of all the files that contain `TK` - unless there aren't any, in which case
+#      # set it to `FILES NOT FOUND"
+#      - files=$(grep -rl 'TK' blog/content/posts || echo "FILES NOT FOUND")
+#      # We have to filter out (`grep -v`) the "marker" value of `FILES NOT FOUND`, otherwise the no-matches case would
+#      # be recorded as having 1 matching file, leading to an error-out below.
+#      # (I guess _technically_ there's an edge case in that, if I ever make a blog post titled "FILES NOT FOUND" _which also_
+#      # contains the string `TK`, it would slip through this check. But that feels pretty unlikely - not least because spaces
+#      # are very rare in my filesystem names - so I'm ok taking that risk)
+#      - count=$(wc -l <(echo "$files" | grep -v "FILES NOT FOUND") | awk '{print $1}')
+#      - if [[ "$count" -gt "0" ]]; then
+#      -   echo "Found TK in $count files:"
+#      -   echo $files
+#      -   exit 1 # TODO - and alerting via Matrix!
+#      - fi
   - name: copy-cert-into-place
     image: busybox
     volumes:

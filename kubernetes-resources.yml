@@ -34,7 +34,7 @@ spec:
       # (Unique to rancher/k3s. On traditional k8s installs, I suspect https://github.com/kubernetes/kubernetes/issues/43924
       # is the way)
       - name: app
-        image: "docker-registry.scubbo.org:8843/scubbo/blog_nginx:built_in_ci"
+        image: "gitea.scubbo.org/scubbo/blog_nginx:built_in_ci"
         imagePullPolicy: 'Always'
         resources:
           requests:

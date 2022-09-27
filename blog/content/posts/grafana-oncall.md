@@ -200,6 +200,21 @@ These are various things that I wasn't sure about, that I want to learn more abo
 * Is there a good health check URL for OnCall (`/ready` doesn't work, despite post-install instructions), or is it just `/`?
 * (A question for myself, rather than the OnCall team) _Does_ k3s come with NFS enabled by-default, or did I install something to enable it - and, if so, what?
 
+**EDIT:** A friend let me know that setting an annotation of `kubernetes.io/ingress.class` is equivalent to setting an `ingressClassName` - and, indeed, by manually setting that annotation in my yaml:
+```yaml
+ingress:
+  enabled: true
+  annotations:
+    "kubernetes.io/ingress.class": "traefik"
+```
+I was able to get a working (Traefik) Ingress created with the Oncall Helm chart. It appears that the Helm chart
+[_should_](https://github.com/grafana/oncall/blob/7deb6fb9206f7372be36c7f0c1e06880dbe83772/helm/oncall/templates/ingress-regular.yaml#L4-L8)
+take the `ingress.className` value and insert it as this annotation - but this is flawed for 2 reasons:
+* It relies on `.Capabilities.KubeVersion.GitVersion`, which is [deprecated in Helm 3.x](https://github.com/helm/charts/issues/20918). I'm not sure whether this is actually causing any problems for me, since my k3s version is `v1.24.3+k3s1` (i.e. `>=1.18`, so you wouldn't expect this annotation-addition to execute in my environment anyway), but it's probably something that should be checked. I know it's unlikely that anyone will have a modern (>3.x) Helm version and an old (<1.18) version of Kubernetes, but the Oncall team might want to check it out.
+* The annotation-based approach of defining Ingress class is [deprecated as of Kubernetes v1.18](https://kubernetes.io/docs/concepts/services-networking/ingress/#deprecated-annotation), which is presumably why the annotation-based approach gates on Kubernetes version `<1.18` - but there's no corresponding `if version >= 1.18` logic in the template to set the `ingressClassName` property.
+
+To that end, I've created [this PR](https://github.com/grafana/oncall/pull/567) on the Oncall repo with what I believe is the fix.
+
 
 [^1]: I'm not aware of distinctions between Pi models that would have any effect here; but, for the record, my cluster is 3\*Pi4s.
 [^2]: I'm a little confused by this statement, actually; since both [a friend who is more-experienced Kubernetes-wrangler](https://twitter.com/cloudycelt), and a [recent article](https://www.phillipsj.net/posts/k3s-enable-nfs-storage/), suggest that this is not the case. What can I say: [it works for me](https://github.com/scubbo/pi-tools/search?q=%22server%3A+rassigma.avril%22), and I don't recall installing anything special? If you are following these instructions and run into issues, please do let me know so that we can try to reverse-engineer whatever I did to make this work!

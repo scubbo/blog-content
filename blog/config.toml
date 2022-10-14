@@ -41,3 +41,8 @@ SectionPagesMenu = "main"
 [[related.indices]]
   name = 'date'
   weight = 10
+
+# https://roneo.org/en/hugo-custom-css-classes-images-markdown-attributes/
+[markup.goldmark.parser.attribute]
+block = true
+title = true

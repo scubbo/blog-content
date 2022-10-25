@@ -12,7 +12,7 @@ Since leaving Amazon ~4 months ago and dedicating more time to my own personal p
 
 # Preamble
 
-If you are an experienced developer who's familiar with CI/CD and GitOps, and/or you are someone I've sent this post to in the hopes you can help answer my confusions, you probably want to [skip ahead](#my-questions-and-confusions)
+If you are an experienced developer who is familiar with CI/CD and GitOps, and/or you are someone I've sent this post to in the hopes you can help answer my confusions, you probably want to [skip ahead](#my-questions-and-confusions)
 
 ## What are CI/CD Pipelines[^image-captions]?
 

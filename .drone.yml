@@ -47,43 +47,25 @@ steps:
     image: plugins/docker
     settings:
       registry: gitea.scubbo.org
-      repo: gitea.scubbo.org/scubbo/blog_nginx
-      tags: built_in_ci
+      repo: gitea.scubbo.org/scubbo/blog_helm
+      tags: ${DRONE_COMMIT_SHA:0:10}
       debug: true
       launch_debug: true
       username: scubbo
       password:
         from_secret: gitea_password
-  - name: update_blog_deployment
-    # I've tried using https://github.com/sinlead/drone-kubectl and
-    # https://github.com/honestbee/drone-kubernetes, but neither is built for arm64
-    image: busybox
-    # Replicating the commands from
-    # https://github.com/sinlead/drone-kubectl/blob/master/init-kubectl
-    commands:
-      # https://github.com/bitnami/bitnami-docker-kubectl/issues/22 -
-      # there's no bitnami/kubectl image for arm64
-      - wget https://storage.googleapis.com/kubernetes-release/release/v1.19.2/bin/linux/arm64/kubectl
-      - chmod +x kubectl
-      - echo "Echoing Kubernetes Server"
-      - echo $kubernetesServer
-      - ./kubectl config set-credentials default --token=$kubernetesToken
-      - echo $kubernetesCert | base64 -d > ca.crt
-      - ./kubectl config set-cluster default --server=$kubernetesServer --certificate-authority=ca.crt
-      - ./kubectl config set-context default --cluster=default --user=default
-      - ./kubectl config use-context default
-      - ./kubectl apply -f kubernetes-resources.yml
-      # This next line wouldn't be necessary if new tags were generated for each image
-      # (though then I'd have to dynamically plumb them into the yml file)
-      # TODO - research if there's a better way to do this. Note that this isn't done
-      # in the `honestbee` repo that I copied from - but I confirmed by `curl`-ing localhost
-      # that simply applying the yml leaves the definitions and the service's output
-      # unchanged, despite `imagePullPolicy: 'Always'`
-      - ./kubectl rollout restart -n blog deployment/blog-deployment
-    environment:
-      kubernetesServer:
-        from_secret: k8s_server
-      kubernetesCert:
-        from_secret: k8s_cert
-      kubernetesToken:
-        from_secret: k8s_token
+  - name: auto-update-infra-repo
+    image: gitea.scubbo.org/scubbo/auto-repo-update-drone-plugin:latest
+    settings:
+      branch: main
+      git_repo: https://gitea.scubbo.org/scubbo/blog-infrastructure
+      image_tag: ${DRONE_COMMIT_SHA:0:10}
+      destination_file: helm/deployed-images/prod
+      author_email: scubbojj@gmail.com
+      author_name: Jack Jackson
+      commit_message: "[Auto] Update Prod to ${DRONE_COMMIT_SHA:0:10}"
+      access_token:
+        from_secret: gitea_pat
+
+image_pull_secrets:
+  - dockerconfigjson

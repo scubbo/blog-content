@@ -92,6 +92,10 @@ If you jumped straight to this section, the links on the questions link back to 
 * [**Why does GitOps define the deployed-image in a Git repo?**](#gitops) - as opposed to having the Infrastructure Code define what _packages_ should be deployed to which Infrastructure elements, and letting the Pipeline decide which Application Code revisions should be deployed - the latest revision that has passed all preceding tests, modulo any rollbacks. The GitOps way seems to introduce a lot of "image-updated" commits to the infrastructure repo, and requires the Pipeline to have otherwise-unnecessary write-permissions to that repo, for no real advantage that I can see.
    * Again, I want to stress the humility with which I ask this question. I would not for a second believe that, after less than a month of tinkering with OSS CI/CD systems, I've come up with a better paradigm than the entire community - rather, I'm trying to highlight the fact that my expectations differ from the tools' defaults, which suggests that I've missed some advantage of their approach.
 
+# (2022-10-27) Update
+
+I created a [Drone plugin](https://gitea.scubbo.org/scubbo/auto-repo-update-drone-plugin) that can be used to write content (such as the image-tag that should be used in a given stage) into a file and commit that change into a Git repo, thereby reproducing the behaviour I expect from a CI/CD pipeline. It works! But the fact that I had to craft this by-hand, again, suggests that I'm doing something that OSS folks consider wrong.
+
 
 
 [^image-captions]: Thanks to [this post](https://sebastiandedeyne.com/captioned-images-with-markdown-render-hooks-in-hugo/) for teaching me how to do image captions easily in Hugo! I still haven't figured out how to get footnote links to properly render within them - [this post](https://github.com/gohugoio/hugo/issues/9816) discusses it in the context of shortcodes, not partials ([I can never remember the difference...](https://jpdroege.com/blog/hugo-shortcodes-partials/)). I tried piping it through [`markdownify`](https://gohugo.io/functions/markdownify/) but that did nothing. Ah well...

@@ -15,7 +15,7 @@ Starting with the second point - I realized today that no mobile messaging app t
 
 "_But your recipients can just put their phone on silent_" - they can, but some people choose not to. In particular, I know that both my partner and my mother have my number set up to override silent settings - whenever I message them, no matter what, it will always play a notification. Like I said above - there might be an emergency, and in their evaluation it's preferable to be contactable in those situations even if it means disturbed sleep at other times when I forget and message them during (their) night-time.
 
-There was a feature request for this in Signal [here](https://github.com/signalapp/Signal-Android/issues/1803), but sadly it was closed without action. I might re-open it (especially now that [Telegram has it](https://telegram.org/blog/silent-messages-slow-mode)[^telegram-does]) and see if their opinion has changed.
+There was a feature request for this in Signal [here](https://github.com/signalapp/Signal-Android/issues/1803), but sadly it was closed without action. I might re-open it (especially now that [Telegram has it](https://telegram.org/blog/silent-messages-slow-mode)[^telegram-does]) and see if their opinion has changed. **EDIT:** they've moved feature requests to a different location, and it's [already open there](https://community.signalusers.org/t/silent-low-priority-messages-to-avoid-disturbing-the-receiver-silent-messages/2532/43).
 
 ## Most communication is less urgent than you think[^only-professional-comms]
 

@@ -16,6 +16,7 @@ SectionPagesMenu = "main"
   twitter = "https://twitter.com/jacksquaredson"
   github = "https://github.com/scubbo"
   linkedin = "https://www.linkedin.com/in/jack-jackson-14a47441/"
+  mastodon = "https://fosstodon.org/@scubbo"
   custom_css = ['inlinespoiler.css']
   show_reading_time = true
   page_source_base = "https://gitea.scubbo.org/scubbo/blogContent/src/branch/main/blog/"

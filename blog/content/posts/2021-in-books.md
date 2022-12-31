@@ -1,6 +1,8 @@
 ---
 title: "2021 in Books"
 date: 2021-12-30T08:29:09-08:00
+tags:
+  - reading
 ---
 My good friend [George](https://tinyletter.com/altthoughtprocess/) set himself a challenge a while back to read 52 books in a calendar year. He succeeded (as George is wont to do), and that achievement has always stuck in my mind as impressive[^1]. I don't think I'd _ever_ be able to equal it (especially not now, with Work-From-Home removing my most common reading time - the commute), but I did start tracking my reading as a matter of interest. To that end, I present my year-of-reading-in-review, with book-by-book recaps and the [full list]({{< ref "#full-list" >}}) at the end:
 
@@ -60,7 +62,7 @@ Not a bad read, by any stretch - but I'll probably re-read Diaspora again, and I
 
 ## number9dream
 
-I'd read and enjoyed a bunch of David Mitchell ([no, not him](https://www.youtube.com/watch?v=om7O0MFkmpw)) many years ago - he's best-known for [Cloud Atlas](https://en.wikipedia.org/wiki/Cloud_Atlas_(novel)), but for my money [The Bone Clocks](https://en.wikipedia.org/wiki/The_Bone_Clocks) is the best one (I am biased, perhaps, by my preference for books that are the cornerstone of their respective authorial universes (Dark Tower fans, rise up!), and by my pathological rejection of the [inevitability of death](https://www.nickbostrom.com/fable/dragon.html)). I noticed this on my friend Jeff's bookshelf and he kindle lent it to me.
+I'd read and enjoyed a bunch of David Mitchell ([no, not him](https://www.youtube.com/watch?v=om7O0MFkmpw)) many years ago - he's best-known for [Cloud Atlas](https://en.wikipedia.org/wiki/Cloud_Atlas_(novel)), but for my money [The Bone Clocks](https://en.wikipedia.org/wiki/The_Bone_Clocks) is the best one (I am biased, perhaps, by my preference for books that are the cornerstone of their respective authorial universes (Dark Tower fans, rise up!), and by my pathological rejection of the [inevitability of death](https://www.nickbostrom.com/fable/dragon.html)). I noticed this on my friend Jeff's bookshelf and he kindly lent it to me.
 
 As with Blindsight (though in a different way), it was fine-to-moderately-good, but felt hampered by a lack of narrative. It was certainly evocative and atmospheric, but I can really only recall a single event in the entire book, and the ending in particular felt like massive anti-climax. Perhaps this was a stylistic choice that I'm simply too plebian to understand.
 

@@ -66,6 +66,13 @@ steps:
       commit_message: "[Auto] Update Prod to ${DRONE_COMMIT_SHA:0:10}"
       access_token:
         from_secret: gitea_pat
+  - name: telegram_notification
+    image: appleboy/drone-telegram
+    settings:
+      token:
+        from_secret: telegram_token
+      to:
+        from_secret: telegram_convo_id
 
 image_pull_secrets:
   - dockerconfigjson

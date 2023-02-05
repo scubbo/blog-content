@@ -54,6 +54,8 @@ steps:
       username: scubbo
       password:
         from_secret: gitea_password
+      settings:
+        mtu: 1450
   - name: auto-update-infra-repo
     image: gitea.scubbo.org/scubbo/auto-repo-update-drone-plugin:latest
     settings:

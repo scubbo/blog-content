@@ -25,6 +25,8 @@ Unfortunately, although an arm64-compatible image of Grafana Oncall was
 cluster wasn't as simple as the [instructions](https://github.com/grafana/oncall/tree/dev/helm/oncall) might have you
 believe. Follow along as I show you the steps I went through.
 
+**EDIT:** Oncall installation on an arm64-cluster is now considerably simpler than it was at the time of writing this article! See [this code snapshot](https://github.com/scubbo/pi-tools/tree/898c06d7c5193d1b7716dde4ba5c572f88de21bb/k8s-objects/helm-charts/grafana-oncall) and/or [this blog post]({{< ref "/posts/rebuild-from-scratch" >}}) for the update. Original content follows below...
+
 Full disclosure, I'm _very_ new to Helm - OnCall's Helm chart is only the second chart I've worked with - so it's very possible that I've misunderstood some aspects or executed something non-idiomatically. Constructive criticism welcome!
 
 ## Summary of what I changed, added, or did differently or unexpectedly

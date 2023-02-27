@@ -68,6 +68,14 @@ steps:
       commit_message: "[Auto] Update Prod to ${DRONE_COMMIT_SHA:0:10}"
       access_token:
         from_secret: gitea_pat
+  # TODO - force Argo update!
+  - name: purge-cache
+    image: curlimages/curl
+    environment:
+      CLOUDFLARE_TOKEN:
+        from_secret: cloudflare_token
+    commands:
+      - "curl -X POST \"https://api.cloudflare.com/client/v4/zones/c86d55d225ed973d5da45239beac2f99/purge_cache\" -H \"Authorization: Bearer ${CLOUDFLARE_TOKEN}\" -H \"Content-Type:application/json\" -d '{\"files\":[\"https://blog.scubbo.com\"]}'"
   - name: telegram_notification
     image: appleboy/drone-telegram
     settings:

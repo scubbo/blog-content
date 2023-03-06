@@ -1,8 +1,8 @@
 ---
 title: "T​K Block"
-date: 2022-08-23T21:46:40-07:00
-draft: true
+date: 2023-03-05T21:45:00-08:00
 tags:
+  - CI/CD
   - meta
 
 ---
@@ -16,27 +16,21 @@ One use of this is as a "placeholder", when you know _roughly_ what will go in a
 
 In the traditional publishing world, an Editor would be responsible for the final pass over the work to make sure all T​Ks have been caught before sending the content out to readers. In the thrilling world of the future where we have taught sand to think by blasting it with lightning, we can automate that process! Look at the changes to `.drone.yml` in the commit that introduced this blog post to see how.
 
-## What about alerting?
-
-Watch this space. I want the original commit to _only_ include the `.drone.yml` update and minimal blog post, to check it works. I'll post a follow-up with description of alerting (via Matrix) next.
-
-If you're seeing this, then congratulations, you caught the blog post before it was meant to be published. But wait...this whole blog post was about how we'd now made that impossible, right? That's right!
-
 ## Wait, but...this blog contains the characters T​K?
 
 I know! See if you can figure it out :)
 
 [^1]: Alright, you know I couldn't resist checking:
 
-```
-$ cat /usr/share/dict/words | wc -l
-  235886
-$ cat /usr/share/dict/words | grep -i 't​k' | wc -l
-      40
-$ echo "100*40/235886" | bc -l
-.01695734380166690689
-```
+    ```
+    $ cat /usr/share/dict/words | wc -l
+      235886
+    $ cat /usr/share/dict/words | grep -i 't​k' | wc -l
+          40
+    $ echo "100*40/235886" | bc -l
+    .01695734380166690689
+    ```
 
-So, _about 0.017%_ of common English words contain those characters. Some stand-outs include "_boat​keeper_", "_giant​kind_", and "_out​knave_".
+    So, _about 0.017%_ of common English words contain those characters. Some stand-outs include "_boat​keeper_", "_giant​kind_", and "_out​knave_".
 
 [^2]: Though, see also George's thoughts on [Being Creative Uphill](https://www.georgelockett.com/shards/2022/7/28/being-creative-uphill) and [How To Write When You Can't](https://www.georgelockett.com/shards/2022/6/16/how-to-write-when-you-cant)

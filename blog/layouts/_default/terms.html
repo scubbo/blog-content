@@ -13,9 +13,11 @@
             {{ $.Data.Singular | humanize }}: {{ $key }}
           </a>
         </h2>
+        <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
         {{ range $value.Pages }}
           {{ partial "tag-summary.html" . }}
         {{ end }}
+        </div>
       {{ end }}
     </section>
   </div>

@@ -5,6 +5,7 @@ tags:
   - homelab
   - CI/CD
   - meta
+  - SDLC
 
 ---
 Since leaving Amazon ~4 months ago and dedicating more time to my own personal projects (and actually trying to ship things instead of getting distracted a few days in by the next shiny project!), I've learned a lot more about the Open Source tools that are available to software engineers; which, in turn, has highlighted a few areas of ignorance about CI/CD Pipelines. Emulating [Julia Evans](https://jvns.ca/), I'm writing this blog both to help lead others who might have similar questions, and to [rubber-duck](https://en.wikipedia.org/wiki/Rubber_duck_debugging) my own process of answering the questions.

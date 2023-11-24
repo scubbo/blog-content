@@ -43,7 +43,7 @@ steps:
       - git submodule init
       - git submodule update --recursive
       - hugo --source blog
-  - name: push-built-image
+  - name: push-arm64-image
     image: plugins/docker
     settings:
       registry: gitea.scubbo.org
@@ -52,6 +52,21 @@ steps:
       debug: true
       launch_debug: true
       username: scubbo
+      platform: linux/arm64
+      password:
+        from_secret: gitea_password
+      settings:
+        mtu: 1450
+  - name: push-amd64-image
+    image: plugins/docker
+    settings:
+      registry: gitea.scubbo.org
+      repo: gitea.scubbo.org/scubbo/blog_helm
+      tags: ${DRONE_COMMIT_SHA:0:10}
+      debug: true
+      launch_debug: true
+      username: scubbo
+      platform: linux/amd64
       password:
         from_secret: gitea_password
       settings:

@@ -2,6 +2,8 @@
 title: "Short Thoughts 2022-03-05"
 date: 2023-03-05T19:49:27-08:00
 tags:
+  - programming-challenges
+  - rust
   - short-thoughts
 
 ---

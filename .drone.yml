@@ -43,34 +43,20 @@ steps:
       - git submodule init
       - git submodule update --recursive
       - hugo --source blog
-  - name: push-arm64-image
-    image: plugins/docker
+  - name: docker-build-and-push
+    image: thegeeklab/drone-docker-buildx # Absurd that this isn't offered as first-party!
+    privileged: true
     settings:
       registry: gitea.scubbo.org
-      repo: gitea.scubbo.org/scubbo/blog_helm
-      tags: ${DRONE_COMMIT_SHA:0:10}
-      debug: true
-      launch_debug: true
       username: scubbo
-      platform: linux/arm64
       password:
         from_secret: gitea_password
-      settings:
-        mtu: 1450
-  # - name: push-amd64-image
-  #   image: plugins/docker
-  #   settings:
-  #     registry: gitea.scubbo.org
-  #     repo: gitea.scubbo.org/scubbo/blog_helm
-  #     tags: ${DRONE_COMMIT_SHA:0:10}
-  #     debug: true
-  #     launch_debug: true
-  #     username: scubbo
-  #     platform: linux/amd64
-  #     password:
-  #       from_secret: gitea_password
-  #     settings:
-  #       mtu: 1450
+      repo: gitea.scubbo.org/scubbo/blog_helm
+      tags:
+        - ${DRONE_COMMIT_SHA:0:10}
+      platforms:
+        - linux/arm64
+        - linux/amd64
   - name: auto-update-infra-repo
     image: gitea.scubbo.org/scubbo/auto-repo-update-drone-plugin:latest
     settings:
@@ -108,7 +94,3 @@ steps:
         from_secret: telegram_token
       to:
         from_secret: telegram_convo_id
-
-
-image_pull_secrets:
-  - dockerconfigjson

@@ -17,5 +17,6 @@ Images:
 ![Alt-text](url "Caption")
 
 Internal links:
-[Link-text]({{< ref "/posts/name-of-post" >}})
+[Link-text](\{\{< ref "/posts/name-of-post" >}})
+(remove the slashes - this is so that the commented-out content will not prevent a built while editing)
 -->

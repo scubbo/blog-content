@@ -2,8 +2,8 @@
 title: "2022 Wrap Up"
 date: 2022-12-31T12:47:00-08:00
 tags:
+  - end-of-year-wrapups
   - productivity
-  - real-life
   - reading
 
 ---

@@ -75,14 +75,14 @@ steps:
       ARGO_TOKEN:
         from_secret: argo_token
     commands:
-      - "curl -s -X POST \"argo-cd-argocd-server.argo.svc.cluster.local/api/v1/applications/blog-infrastructure/sync\" -H \"Authorization: Bearer ${ARGO_TOKEN}\" -H \"Content-Type: application/json\""
+      - "curl -sS -X POST \"argo-cd-argocd-server.argo.svc.cluster.local/api/v1/applications/blog-infrastructure/sync\" -H \"Authorization: Bearer ${ARGO_TOKEN}\" -H \"Content-Type: application/json\""
   - name: purge-cache
     image: curlimages/curl
     environment:
       CLOUDFLARE_TOKEN:
         from_secret: cloudflare_token
     commands:
-      - "curl -s -X POST \"https://api.cloudflare.com/client/v4/zones/c86d55d225ed973d5da45239beac2f99/purge_cache\" -H \"Authorization: Bearer ${CLOUDFLARE_TOKEN}\" -H \"Content-Type:application/json\" -d '{\"files\":[\"https://blog.scubbo.com\"]}'"
+      - "curl -sS -X POST \"https://api.cloudflare.com/client/v4/zones/c86d55d225ed973d5da45239beac2f99/purge_cache\" -H \"Authorization: Bearer ${CLOUDFLARE_TOKEN}\" -H \"Content-Type:application/json\" -d '{\"files\":[\"https://blog.scubbo.com\"]}'"
   - name: telegram_notification
     image: appleboy/drone-telegram
     when:

@@ -156,8 +156,8 @@ I'd pre-acknowledged that this was not going to be a good year on either of my p
 I'd definitely like to read more non-fiction, and more books by non-white/non-men authors next year. Some that are planned off the top of my head (not necessarily prioritizing those criteria):
 * OverLondon (based on [the author's delightful Mastodon presence](https://fosstodon.org/@georgepenney@sunny.garden), and a review I saw somewhere calling it Pratchett-esque).
 * Thinking Fast And Slow - also picked up in the Chicago second-hand bookstore.
-* The Design Of Everyday Things
-* "Programming Rust" by Blandy, Orendorr, and Tindall
+* The Design Of Everyday Things.
+* "Programming Rust" by Blandy, Orendorr, and Tindall.
 
 In the [previous year]({{< ref "/posts/2022-wrap-up" >}}), I included a round-up of the Articles I read that year, but this post is already getting overlong - I'll follow up with that in a separate post instead.
 

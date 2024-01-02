@@ -7,8 +7,6 @@ tags:
   - SDLC
 
 ---
-# Articles
-
 Stand-outs among articles I read this year - abandoning the table layout from last year in favour of readability.
 
 <!--more-->

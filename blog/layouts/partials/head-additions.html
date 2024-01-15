@@ -11,3 +11,10 @@
 {{ if .Params.math }}{{ partial "helpers/katex.html" . }}{{ end }}
 <script defer data-domain="blog.scubbo.org" src="https://tracking.scubbo.org/js/plausible.js"></script>
 
+<!--
+  https://gohugo.io/templates/rss/
+-->
+{{ with .OutputFormats.Get "rss" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+

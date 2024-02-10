@@ -20,7 +20,7 @@ Another snippet from Iain M. Banks' wonderful "_Use Of Weapons_", detailing the 
 >
 > He smiled in response to the man's grin, '_Well, yes._'
 >
-> '_But then, what_ does _signify? My other work? Is that really important, either? I could try composing wonderful musical works, or day-long entertainment epics, but what would that do? Give people pleasure? My wiping this table gives me pleasure. And people come to a clean table, which gives_ them _pleasure. And anyway,_' the man laughed, '_people die; stars die; universes die. **What is any achievement, however great it was, once time itself it dead?** Of course, if_ all _I did was wipe tables, then of course it would seem a mean and despicable waste of my huge intellectual potential. But because I choose to do it, it gives me pleasure. And,_' the man said with a smile, '_it's a good way of meeting people. So; where are you from, anyway?_'
+> '_But then, what_ does _signify? My other work? Is that really important, either? I could try composing wonderful musical works, or day-long entertainment epics, but what would that do? Give people pleasure? My wiping this table gives me pleasure. And people come to a clean table, which gives_ them _pleasure. And anyway,_' the man laughed, '_people die; stars die; universes die. **What is any achievement, however great it was, once time itself is dead?** Of course, if_ all _I did was wipe tables, then of course it would seem a mean and despicable waste of my huge intellectual potential. But because I choose to do it, it gives me pleasure. And,_' the man said with a smile, '_it's a good way of meeting people. So; where are you from, anyway?_'
 
 \[Emphasis mine\]
 
@@ -30,6 +30,6 @@ God I love this. It reminds me of a classic Tumblr exchange:
 
 ![I Simply Do Not Dream Of Labor](/img/do-not-dream-of-labor.jpg "If you think that you do not dream of labor...")
 
-![Yes You Do](/img/dream-of-labor.jpg "...it may be that you have just never been experienced a way in which labor can be productive and rewarding")
+![Yes You Do](/img/dream-of-labor.jpg "...it may be that you have just never experienced a way in which labor can be productive and rewarding")
 
 I am a _sucker_ for frame challenges and for re-evaluating the actual sources of issues - "_The problem is not X - X can be useful, helpful, and desirable. The problem is the context in which X currently exists negates its beneficial effects._". Plus, y'know - Fully Automated Luxury Gay Space Communism, always and forever the goal ✊🏻

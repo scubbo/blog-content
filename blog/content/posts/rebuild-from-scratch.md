@@ -4,6 +4,7 @@ date: 2023-02-07T19:52:44-08:00
 tags:
   - CI/CD
   - homelab
+  - k8s
   - observability
 
 ---

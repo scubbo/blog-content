@@ -3,6 +3,7 @@ title: "Grafana Oncall"
 date: 2022-09-13T10:52:53-07:00
 tags:
   - homelab
+  - k8s
   - observability
 
 ---

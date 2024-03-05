@@ -3,6 +3,7 @@ title: "VPN on Kubernetes"
 date: 2022-12-15T22:28:24-08:00
 tags:
   - homelab
+  - k8s
 
 ---
 I was surprised to find that there's not much discussion of putting Kubernetes pods behind a VPN. Given how useful both tools are, you'd think more people would use them in concert.

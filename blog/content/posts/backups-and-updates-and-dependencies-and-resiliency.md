@@ -3,6 +3,7 @@ title: "Backups and Updates and Dependencies and Resiliency"
 date: 2024-02-18T16:00:00-08:00
 tags:
   - homelab
+  - k8s
   - SDLC
 
 ---

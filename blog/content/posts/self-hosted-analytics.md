@@ -3,6 +3,7 @@ title: "Self-Hosted Analytics"
 date: 2022-08-02T20:23:48-07:00
 tags:
   - homelab
+  - k8s
   - meta
 
 ---

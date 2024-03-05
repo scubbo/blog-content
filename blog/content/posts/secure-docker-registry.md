@@ -3,6 +3,7 @@ title: "Secure Docker Registry"
 date: 2022-07-01T21:26:32-07:00
 tags:
   - homelab
+  - k8s
 ---
 Part of the self-hosted setup that supports this blog (along with all my other homelab projects) is a [Docker Registry](https://docs.docker.com/registry/) to hold the images built and used in the CI/CD pipeline. Recently I tried to install TLS certificates to secure interaction with the Registry, and it was a fair bit harder to figure out than I expected, so I wanted to write it up both for future-me and for anyone else struggling with the same problem.
 <!--more-->

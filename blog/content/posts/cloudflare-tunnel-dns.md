@@ -3,6 +3,7 @@ title: "Cloudflare Tunnel DNS"
 date: 2022-08-22T16:05:39-07:00
 tags:
   - homelab
+  - k8s
   - meta
 
 ---

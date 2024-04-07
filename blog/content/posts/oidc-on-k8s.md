@@ -4,6 +4,7 @@ date: 2024-04-01T20:36:32-07:00
 tags:
   - dns
   - homelab
+  - keycloak
   - k8s
 
 ---

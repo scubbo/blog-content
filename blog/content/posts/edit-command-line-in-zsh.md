@@ -3,6 +3,9 @@ title: "Edit Command Line in Zsh"
 date: 2022-07-10T00:25:21-07:00
 
 ---
+
+**EDIT 2024-04-16**: turns out that there's a [built-in](https://www.computerhope.com/unix/uhistory.htm), `fc`, which does basically the same thing, though it edits the command that was _just entered_ (which is typically what you want when you encounter an error or want to do "the next thing", anyway).
+
 While reading through my dotfiles, I found some [configuration](https://github.com/scubbo/dotfiles/blob/690f907f9ae36e36fed9851eac3a4ff2c20d7905/zshrc-local-mactop#L144-L147)[^1] that didn't seem to be working - it claimed that `<ESC>,v` would allow editing of the current line in vim, but that didn't seem to work. I guess I'd copied that from some other configuration and lost patience with trying to get it working, or that it relied on some other configuration option which had been broken[^2]. I dug in to find out more. ([This article](https://thevaluable.dev/zsh-line-editor-configuration-mouseless/) was invaluable!)
 <!--more-->
 ## Intention

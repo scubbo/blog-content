@@ -30,6 +30,14 @@ I don't _think_ that Drone's able to load OAuth secrets from the filesystem or a
 
 The walkthrough [here](https://developer.hashicorp.com/vault/tutorials/kubernetes/vault-secrets-operator) was very straightforward - I got through to creating and referencing a Static Secret with no problems, and then tore it down and recreated via [IaC](https://gitea.scubbo.org/scubbo/helm-charts/commit/b856fd2bc5dd047ca93809bd102315cf867740d3). With that in place, it was pretty easy to (convert my [Drone specification to jsonnnet](https://gitea.scubbo.org/scubbo/helm-charts/commit/1926560274932d4cd052d2281cac82d4f33cacd3) and then to) [create a Kubernetes secret referencing the Vault secrets](https://gitea.scubbo.org/scubbo/helm-charts/commit/4c82c014f83020bad95cb81bc34767fef2c232c1). I deleted the original (manually-created) secret and deleted the Drone Pod immediately before doing so just to check that it worked - as I expected, the Pod failed to come up at first (because the Secret couldn't be found), and then successfully started once the Secret was created. Works like a charm!
 
+## (Added 2024-04-29) Namespacing secrets
+
+After attempting to use these Secrets for another use-case, I've run into a speed-bump: the `bound_service_account_namespaces` for the Vault role specifies which Kubernetes namespaces can use that Role to access secrets, but it's all-or-nothing - if a role is available to multiple namespaces, there's no way to restrict that a given namespace can only access certain secrets.
+
+I haven't seen this explicitly stated, but it seems like the intended way to control access is to, create a different Vault Role for each namespace (only accessible _from_ that namespace), and to grant that Vault Role only the appropriate Vault policies.
+
+Gee, if [only](https://www.crossplane.io/) there was a way to manage Vault entities via Kubernetes...😉
+
 # Further thoughts
 
 ## Type-safety and tooling

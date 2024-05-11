@@ -38,6 +38,8 @@ I haven't seen this explicitly stated, but it seems like the intended way to con
 
 Gee, if [only](https://www.crossplane.io/) there was a way to manage Vault entities via Kubernetes...😉
 
+(Update 2024-05-11 - see [here]({{< ref "/posts/base-app-infrastructure" >}}) for a solution!)
+
 # Further thoughts
 
 ## Type-safety and tooling

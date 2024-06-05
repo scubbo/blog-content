@@ -1,3 +1,9 @@
+kind: secret
+name: mastodon_access_token
+get:
+  path: mastodon-creds
+  name: access_token
+---
 kind: pipeline
 name: hello-world
 type: docker
@@ -5,6 +11,7 @@ type: docker
 platform:
   os: linux
   arch: arm64
+
 
 steps:
   - name: block-posts-containing-tk
@@ -94,3 +101,12 @@ steps:
         from_secret: telegram_token
       to:
         from_secret: telegram_convo_id
+  - name: mastodon_post
+    image: curlimages/curl
+    environment:
+      MASTODON_TOKEN:
+        from_secret: mastodon_access_token
+    commands:
+      - "env | grep 'MASTODON'"
+      - echo "$${MASTODON_TOKEN}"
+      - echo $MASTODON_TOKEN

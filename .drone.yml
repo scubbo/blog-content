@@ -101,12 +101,31 @@ steps:
         from_secret: telegram_token
       to:
         from_secret: telegram_convo_id
+  # TODO - parse the file itself to a) extract title, and b) not post if it's a draft post (or, conversely, post if it's
+  # a draft that's been published - which would require changing the "is new file" logic)
   - name: mastodon_post
-    image: curlimages/curl
+    image: alpine
     environment:
       MASTODON_TOKEN:
         from_secret: mastodon_access_token
     commands:
-      - "env | grep 'MASTODON'"
-      - echo "$${MASTODON_TOKEN}"
-      - echo $MASTODON_TOKEN
+      - apk add curl git perl
+      - "ADDED_FILES=$(git show --name-status --pretty=format: HEAD | grep '^A' | awk '{print $2}')"
+      - if [[ "$( echo -n $ADDED_FILES | grep -c '^')" -ne 1 ]]; then
+      -   echo "Non-single file added"
+      - "  echo \"(DEBUG: $ADDED_FILES)\""
+      -   return
+      - fi
+      - NEW_FILE=$(echo $ADDED_FILES | head -n1)
+      - echo "New File is $NEW_FILE"
+      - if ! [[ "$NEW_FILE" =~ ^blog/content/posts/.*  ]]; then
+      -   echo "Sole added file was not a blog post";
+      -   return;
+      - fi
+      # Debug - checking value
+      - echo $MASTODON_TOKEN | perl -pe 's/(.)/$1:/g'
+      # TODO - parameterize hostname
+      - BLOG_URL=$(echo "$NEW_FILE" | perl -pe 's|blog/content|https://blog.scubbo.org|' | perl -pe 's/\.md$//')
+      - echo $BLOG_URL
+      - "curl -v https://fosstodon.org/api/v1/statuses -H \"Authorization: Bearer $MASTODON_TOKEN\" -F \"status=I just blogged! Check it out at $BLOG_URL\""
+      - echo "Another command to give some extra output"

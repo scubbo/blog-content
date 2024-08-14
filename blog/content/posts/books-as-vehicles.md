@@ -15,7 +15,7 @@ This passage covers our hero Adrian's meeting with his Senior Tutor, philology p
 >
 > Books and books and books. And then, just when an observer might be lured into thinking that that must be it, more books.
 >
-> Barely a square inch of wood or wall or floor was visible. Walking was only allowed by pathways cut between the piles of books. Treading these pathways with books waist-high either side was likenegotiating a maze. Trefusis called the room his 'librarinth'. Areas where seating was possible were like lagoons in a coral strand of books.
+> Barely a square inch of wood or wall or floor was visible. Walking was only allowed by pathways cut between the piles of books. Treading these pathways with books waist-high either side was like negotiating a maze. Trefusis called the room his 'librarinth'. Areas where seating was possible were like lagoons in a coral strand of books.
 >
 > Adrian supposed that any man who could speak twenty-three languages and read forty was likely to collect a few improving volumes along the way. Trefusis himself was highly dismissive of them.
 >

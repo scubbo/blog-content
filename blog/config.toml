@@ -2,7 +2,7 @@ baseURL = 'https://blog.scubbo.org/'
 languageCode = 'en-us'
 title = "Jack Jackson's Blog"
 theme = "ananke"
-disqusShortname = 'scubbo-blog'
+DisqusShortname = 'scubbo-blog'
 
 SectionPagesMenu = "main"
 

@@ -46,7 +46,9 @@ steps:
     commands:
       # I considered caching this install in a pre-built image in registry,
       # but the install seems pretty quick!
-      - apk add hugo git
+
+      # # Pinning to an old version of Hugo because ananke theme has not yet updated to remove deprecated logic
+      - apk add hugo=0.123.0 git
       - git submodule init
       - git submodule update --recursive
       - hugo --source blog

@@ -48,6 +48,7 @@ steps:
       # but the install seems pretty quick!
 
       # # Pinning to an old version of Hugo because ananke theme has not yet updated to remove deprecated logic
+      - apk update
       - apk add hugo=0.123.0 git
       - git submodule init
       - git submodule update --recursive

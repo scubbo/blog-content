@@ -2,7 +2,6 @@ baseURL = 'https://blog.scubbo.org/'
 languageCode = 'en-us'
 title = "Jack Jackson's Blog"
 theme = "ananke"
-DisqusShortname = 'scubbo-blog'
 
 SectionPagesMenu = "main"
 
@@ -21,6 +20,7 @@ SectionPagesMenu = "main"
   custom_css = ['inlinespoiler.css']
   show_reading_time = true
   page_source_base = "https://gitea.scubbo.org/scubbo/blogContent/src/branch/main/blog/"
+  DisqusShortname = 'scubbo-blog'
 
 # That is, explicitly disabling `categories` taxonomy
 # https://gohugo.io/content-management/taxonomies/#example-removing-default-taxonomies

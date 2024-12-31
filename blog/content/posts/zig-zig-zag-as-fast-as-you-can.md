@@ -208,6 +208,8 @@ You'll note that the variables `TIMES_TO_RUN_A_SINGLE_TEST` and `NUMBER_OF_TESTS
 
 Still, even with these low counts - it's surprising for the pointer-based approach to be pretty consistently _slower_. I suspect I'm doing something wrong in my test cases, since the explanation I was given seems intuitively sensible - "_finding the value-location_" twice is always going to be slower than finding it once. I wonder if it's possible that some other part of the test-setup (say, random number generation) dominates the time-spent, and so I'm not actually getting an accurate comparison of pointer-based vs. non-pointer-based interaction with Map Values. I'll try some further experiments in that direction.
 
+UPDATE 2024-12-31 - those fine folks over at Ziggit have [given some pointers on what I might have missed](https://ziggit.dev/t/whats-the-point-in-hashmap-getorput/7547). I'm spending the last few hours of 2024 trying to progress further in AoC (I don't know if there _is_ a cutoff, but my self-imposed limit is "within 2024"), but I'll try those in the New Year.
+
 
 [^advent-of-code]: you can see my solutions [here](https://gitea.scubbo.org/scubbo/advent-of-code-2024) - though, since I'd written zero lines of Zig before these challenges, and I've mostly been focused on achieving solutions quickly rather than optimally or maintainably, please don't judge me on Code Quality! 😆
 [^rust]: which I used for [last year's Advent Of Code](https://github.com/scubbo/advent-of-code-2023)

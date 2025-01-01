@@ -70,7 +70,7 @@ On the positive side, I now have a better understanding of what my coworker mean
 
 A standard of "best sci-fi" books, I had high hopes for this one - hopes that, sadly, were not met. It had some cool ideas in it, for sure (the composite-consciousness species was a new one to me), but other than that - well, I'll just quote my [Mastodon post](https://fosstodon.org/@scubbo/110618207602838405)[^no-toots] of the time:
 
-> "A Fire Upon The Deep" may be the most disappointing book I've ever read. The intro teased truly inhuman AI viewpoints, never deliverd; popular reporting of the book makes much of "code archaeology", only mentioned once in passing; the two alien races are interesting ideas but nothing's done with them (I truly thought the radio-coats would lead to Flenser *becoming* a Power); the ending was a non-event that left countless plot threads open.
+> "A Fire Upon The Deep" may be the most disappointing book I've ever read. The intro teased truly inhuman AI viewpoints, never delivered; popular reporting of the book makes much of "code archaeology", only mentioned once in passing; the two alien races are interesting ideas but nothing's done with them (I truly thought the radio-coats would lead to Flenser *becoming* a Power); the ending was a non-event that left countless plot threads open.
 
 It's _possible_ that the sequel Children Of The Sky would pick up on some of those plot threads in a satisfying way, but I'm unlikely to chance it. Who knows, though - maybe going in with lowered expectations would make me enjoy it more!?
 
@@ -126,7 +126,7 @@ I closed out the year with Cory Doctorow's latest book, subtitled "_How to Seize
 8. The Annihilation Score
 9. The Nightmare Stacks
 10. The Frugal Wizard's Handbook For Surviving Medieval England
-11. The Delirium Briefk
+11. The Delirium Brief
 12. The Labyrinth Index
 13. The First 90 Days
 14. Underdog

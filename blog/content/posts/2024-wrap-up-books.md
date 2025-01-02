@@ -134,7 +134,7 @@ Do yourself a favour and simply read one of these all-time greats, instead:
 * [Many More Much Smaller Steps](https://www.geepawhill.org/2021/09/29/many-more-much-smaller-steps-first-sketch/) if you are a craftsperson of any form (though it's primarily written for software engineers)
 * [Manual Work Is A Bug](https://queue.acm.org/detail.cfm?id=3197520) if you are a Software Engineer
 
-[^friends]: among which I count myself not _just_ because of my friendship with noted word-wranglers [George](https://www.georgelockett.com/) and [Olivia](https://www.oliviawood.co.uk/), Failbetters both at various times.
+[^friends]: among which I count myself not _just_ because of my friendship with noted word-wranglers [George](https://www.georgelockett.com/) and [Olivia](https://www.oliviawood.co.uk/), Failbetterers both at various times.
 [^notes]: not counting textbooks at school - though, even then, the topics I studied meant that this was rarely relevant anyway. I still remember the horror on my History-student friend's face when I told him that, in the course of my three-year Maths degree, I had checked out a single book from the library, for the purposes of reading a single paragraph.
 [^reliability-of-memory]: of course, the author would have something to say about the reliability of memory, here...
 [^something-positive]: deliberately not linked because...no. JFC it's still going - that's a blast-from-the-past.

@@ -41,6 +41,11 @@ This is a ["Uses" page](https://uses.tech/), detailing some of the tools and oth
 
 ### Software
 
-More detail to follow! TL;DR - k3s, Helm, Gitea, Argo, Vault, Drone CI (would love to drop that), Grafana, OpenProject, Jellyfin, Crossplane, [democratic-csi](https://github.com/democratic-csi/democratic-csi), KeyCloak, HomeAssistant.
+* [k3s](https://k3s.io/) is a super-simple way to install a Kubernetes cluster on "_something as small as a Raspberry Pi_". I'm sure it's probably missing some of the bells-and-whistles of the more fully-featured installations, but I've never hit any limitations that mattered to me. You can see the setup in the [pi-tools](https://github.com/scubbo/pi-tools/tree/main/scripts-on-pi)[^out-of-date-naming] repo that I use to configure my homeserver. Configuration and installation is [just these two lines](https://github.com/scubbo/pi-tools/blob/main/scripts-on-pi/controller_setup/1.sh#L67-L70), though there are another 70 or so lines of installing convenience resources (which I should really migrate to a full GitOps location, but eh, who has the time?)
+  * [Helm](https://helm.sh/) and [ArgoCD](https://argo-cd.readthedocs.io/en/stable/) are invaluable for defining and deploying Kubernetes applications, respectively.
+  * I have really enjoyed what tinkering I've done with [cdk8s](https://cdk8s.io/) for Infrastructure-As-Code, but haven't used it in earnest yet. I have been able to use some [jsonnet](https://jsonnet.org/) to achieve some [pretty terse application definitions](https://gitea.scubbo.org/scubbo/helm-charts/src/branch/main/app-of-apps/edh-elo.jsonnet), though.
+
+More detail to follow! TL;DR - Gitea, Vault, Drone CI (would love to drop that), Grafana, OpenProject, Jellyfin, Crossplane, [democratic-csi](https://github.com/democratic-csi/democratic-csi), KeyCloak, HomeAssistant.
 
 [^ai-optin]: Yes, I know it was opt-in. It still indicates decision-making that I don't want to support.
+[^out-of-date-naming]: the naming is somewhat out-of-date, since I've added a non-Pi PowerEdge to the cluster - but hey, all engineers know there's nothing to permanent as a temporary name!

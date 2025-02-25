@@ -79,7 +79,7 @@ Anyway - this is well-trodden ground, and I'm sure you can sketch out the next f
 
 ## Gitea Actions and Helm
 
-I've been meaning to migrate away from Drone as my CI/CD provider for a while now. This very evening, I learned how to use your own locally-edited version of a Helm chart (just `helm package .` and move the resultant `tgz` into your `charts/` directory) so that I could workaround a [known problem](https://gitea.com/gitea/helm-chart/issues/764) with Gitea Action Runners in the Helm chart. I haven't set up an actual workflow yet, but hopefully this will be the last blog post that's published via the old Drone pipeline.
+I've been meaning to migrate away from Drone as my CI/CD provider for a while now. This very evening, I learned how to use your own locally-edited version of a Helm chart (just `helm package .` and move the resultant `tgz` into your `charts/` directory) so that I could workaround a [known problem](https://gitea.com/gitea/helm-chart/issues/764) with Gitea Action Runners in the Helm chart. I haven't set up an actual workflow yet, but hopefully this will be the last blog post that's published via the old Drone pipeline[^gitea-actioned].
 
 # What I'd like to do
 
@@ -94,3 +94,4 @@ I've been meaning to migrate away from Drone as my CI/CD provider for a while no
 [^untrustworthy]: I particularly appreciated the recognition that "_a lot of better informed people have sworn off LLMs entirely because they can’t see how anyone could benefit from a tool with so many flaws. The key skill in getting the most out of LLMs is learning to work with tech that is both inherently unreliable and incredibly powerful at the same time. This is a decidedly non-obvious skill to acquire!_"
 [^writing-to-think]: in fact that would entirely defeat the purpose of "_writing in order to figure out what you think_". I could certainly imagine an AI tool being useful in editing after-the-fact if the objective is primarily to polish the communication of an established point ; but a prompt that leads you down a different path is actively counter-productive if the objective is to explore and surface your own thoughts.
 [^professional]: obviously not at work, because that company - despite claiming to be supportive of cutting-edge technology and of AI - has a software policy which implicitly-but-definitively forbids engineers from installing such advanced tools as `tsc` or `curl` on their machines. Lawyers, man...
+[^gitea-actioned]: if you can see this footnote, this diff was published via Gitea Actions! :)

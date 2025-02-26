@@ -10,6 +10,13 @@ jobs:
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by Gitea!"
       - run: echo "🔎 The name of your branch is ${{ gitea.ref }} and your repository is ${{ gitea.repository }}."
 
+      # Despite not being present in the QuickStart instructions, this step is necessary in order to install `node`,
+      # which is itself required for `actions/checkout`
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
       - name: Check out repository code
         uses: actions/checkout@v4
         

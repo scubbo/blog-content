@@ -21,7 +21,8 @@ jobs:
       - checkout
     runs-on: alpine
     steps:
-      - run: apk add --no-cache bash
+      - shell: /bin/sh
+        run: apk add --no-cache bash
       - run: |
           echo "Hello World"
           echo "Goodbye Mars"
@@ -31,7 +32,8 @@ jobs:
       - block-posts-containining-tk
     runs-on: alpine
     steps:
-      - run: apk add --no-cache bash
+      - shell: /bin/sh
+        run: apk add --no-cache bash
       - run: |
           apk add --no-cache hugo git
           git submodule init

@@ -12,10 +12,10 @@ jobs:
 
       # Despite not being present in the QuickStart instructions, this step is necessary in order to install `node`,
       # which is itself required for `actions/checkout`
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
+      # Cannot use `actions/setup-node` because that _itself_ requires `node` (it makes it available to user-code,
+      # rather than to the system. Interesting discussion [here](https://gitea.com/gitea/act_runner/issues/538))
+      - name: Install node
+        run: apt install -y node
 
       - name: Check out repository code
         uses: actions/checkout@v4

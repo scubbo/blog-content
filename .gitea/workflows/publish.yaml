@@ -43,9 +43,8 @@ jobs:
 
       - name: Build blog
         run: |
-          apt-get update && sudo apt-get install -y hugo git
-          pwd
-          ls
+          sudo apt-get update
+          sudo apt-get install -y hugo=0.139.0-* git
           git submodule init
           git submodule update --recursive
           hugo --source blog

@@ -19,7 +19,7 @@ jobs:
   block-posts-containining-tk:
     depends-on:
       - checkout
-    runs-on: busybox
+    runs-on: alpine
     steps:
       - run: |
           echo "Hello World"

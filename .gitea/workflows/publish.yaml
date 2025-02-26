@@ -16,15 +16,11 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-  # I'd like to use `alpine`, here, but it doesn't have `bash` installed by default.
-  # It can be installed with `shell: /bin/sh\nrun: apk add --no-cache bash`, but that's a pain.
-  # In any case, `ubuntu-latest` should already be present, so there shouldn't be extra delay in pulling it.
-  block-posts-containining-tk:
-    depends-on:
-      - checkout
-    runs-on: ubuntu-latest
-    steps:
-      - run: |
+      - name: cd into
+        run: cd blogcontent
+
+      - name: Block posts containing-tk
+        run: |
           # This is necessary because, if `grep ...` doesn't find anything, it will _return_ (not print) a value of 1
           # (non-zero return codes indicating errors in Unix - since there are many more ways for something to go wrong
           # than there are for it to go right!), and so the `files=` assignment will also return 1, and the whole operation
@@ -47,13 +43,9 @@ jobs:
             echo $files
             exit 1 # TODO - and alerting via Matrix!
           fi
-    
-  build-blog:
-    depends-on:
-      - block-posts-containining-tk
-    runs-on: ubuntu-latest
-    steps:
-      - run: |
+
+      - name: Build blog
+        run: |
           apt-get update && sudo apt-get install -y hugo git
           pwd
           ls

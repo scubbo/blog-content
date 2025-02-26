@@ -16,9 +16,6 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      - name: cd into
-        run: cd blogcontent
-
       - name: Block posts containing-tk
         run: |
           # This is necessary because, if `grep ...` doesn't find anything, it will _return_ (not print) a value of 1

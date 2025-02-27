@@ -90,7 +90,9 @@ jobs:
 
       - name: Update deployment
         run: |
-          kustomize edit set image image_name=*:${{ gitea.sha }}
+          pwd
+          ls # debugging
+          ./kustomize edit set image image_name=*:${{ gitea.sha }}
 
       - name: Commit and push
         run: |

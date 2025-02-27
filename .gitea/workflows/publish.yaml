@@ -72,4 +72,28 @@ jobs:
             gitea.scubbo.org/scubbo/blogcontent:latest  
             gitea.scubbo.org/scubbo/blogcontent:${{ gitea.sha }}
 
- # TODO - update deployment with new image
+  update-deployment-repo:
+    runs-on: ubuntu-latest
+    needs:
+      - build-and-push
+    steps:
+      - name: Check out deployment repo
+        uses: actions/checkout@v4
+        with:
+          repository: gitea.scubbo.org/scubbo/blog-deployment
+
+      - name: Install kustomize
+        run: |
+          apt-get update && apt-get install -y kustomize
+
+      - name: Update deployment
+        run: |
+          kustomize edit set image image_name=*:${{ gitea.sha }}
+
+      - name: Commit and push
+        run: |
+          git config --global user.email "auto-updater@scubbo.org"
+          git config --global user.name "UpdaterBot"
+          git add .
+          git commit -m "Update blog content to ${{ gitea.sha}}"
+          git push

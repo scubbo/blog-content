@@ -80,7 +80,8 @@ jobs:
       - name: Check out deployment repo
         uses: actions/checkout@v4
         with:
-          repository: gitea.scubbo.org/scubbo/blog-deployment
+          repository: scubbo/blog-deployment
+          token: ${{ secrets.PAT_FOR_GITEA_ACCESS }}
 
       - name: Install kustomize
         run: |

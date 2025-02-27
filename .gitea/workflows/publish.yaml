@@ -83,9 +83,10 @@ jobs:
           repository: scubbo/blog-deployment
           token: ${{ secrets.PAT_FOR_GITEA_ACCESS }}
 
+      # Seems insecure - and it is! - but this is literally recommended by the Kustomize docs
       - name: Install kustomize
-        run: |
-          apt-get update && apt-get install -y kustomize
+        run: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+
 
       - name: Update deployment
         run: |

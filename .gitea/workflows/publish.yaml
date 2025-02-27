@@ -69,7 +69,7 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            gitea.scubbo.org/scubbo/blog:latest  
-            gitea.scubbo.org/scubbo/blog:${{ gitea.sha }}
+            gitea.scubbo.org/scubbo/blogcontent:latest  
+            gitea.scubbo.org/scubbo/blogcontent:${{ gitea.sha }}
 
  # TODO - update deployment with new image

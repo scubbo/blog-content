@@ -1,0 +1,23 @@
+name: Mirror to GitHub
+run-name: Mirror to GitHub
+on: [push]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      # If I were going to make this as a template, I'd instead use the `${{ github.[...] }} context to determin owner
+      # and name directly from the context.
+      # I'm leaving that off because it'd require a whole other step (to pipe `github.repository` through a splitting
+      # tool, because there's only `github.repository_owner`, no `github.repository_name`)
+      #
+      # (And the token should be retrieved from Vault)
+      - uses: https://gitea.scubbo.org/scubbo/commit-report-sync@main
+        with:
+          target_repo_domain: github.com
+          target_repo_owner: scubbo
+          target_repo_name: gitea-commit-mirror
+          source_repo_domain: gitea.scubbo.org
+          source_repo_owner: scubbo
+          source_repo_name: blogcontent
+          token_for_target_repo: ${{ secrets.PAT_FOR_GITHUB_SYNC }}

@@ -23,6 +23,7 @@ Don't get me wrong - the ethical question of the morality of capitalizing a remi
 
 # What I'd Like To Do
 
+* Plumb in secrets from Vault to a Gitea Actions workflow (an obvious use-case would be re-building my "_Telegram message on a build pass/fail_", as well as the image publication step)
 * I mentioned in the title that this could arguably be "month-notes", as it's the start of a new month. I don't think I'm going to start keeping these notes on that scale, but it does give me a prompt to get back into my old GTD routine. What with one thing and another I've let it lapse in 2025, but the mark of a well-formed habit is one that you can restart when it lapses. A monthly review to figure out the higher-level projects I want to work towards, and to be mindful of the passage of time rather than [burning the days](https://paulgraham.com/vb.html), would be a good idea.
 * Ported over from last week - getting Keycloak working again on my homelab
 * "Closing the loop" on my backup systems and verification. As I've [mentioned before]({{< ref "/posts/backups-and-updates-and-dependencies-and-resiliency" >}}), I have [BackBlaze](https://www.backblaze.com/) ostensibly backing up my data (including the source code on my Gitea instance), but I have tested it exactly zero times. A good habit to bake into a Monthly Review!

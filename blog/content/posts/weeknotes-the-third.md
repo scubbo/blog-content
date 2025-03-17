@@ -15,7 +15,7 @@ I had intended to write this weeknotes on the amusing rabbit-hole of yak-shaving
 * But I should really take that opportunity to convert my [cert-manager definition](https://gitea.scubbo.org/scubbo/helm-charts/src/branch/main/app-of-apps/apps.yaml#L1-L27) to my [fancy new libsonnet-based approach](https://gitea.scubbo.org/scubbo/helm-charts/src/branch/main/app-of-apps/app-definitions.libsonnet).
 * But before doing _that_, I want to install the [GitHub Vault Plugin](https://github.com/martinbaillie/vault-plugin-secrets-github) to provide automated scoped authentication for Gitea Actions, so that I don't need to keep refreshing the credentials for my [Commit Report Sync](https://gitea.scubbo.org/scubbo/commit-report-sync) tool.
 
-...but while attempting to start writing the blogpost _on_ that rabbit hole, I found that the recent restart of my NAS (due to the manufacturer's sending me a replacement PSU[^wrong-molex]) had caused k8s dynamic PVC provision to get into a weird state, necessitating some force-deletion of PVCs and pods, meaning that my Gitea install's Redis cluster got into a broken state[^redis], so it's taken the better part of my entire weekend to even be able to publish this post[^publish].
+...but while attempting to start writing the blogpost _on_ that rabbit hole, I found that the recent restart of my NAS (due to the manufacturer's sending me a replacement PSU[^wrong-molex]) had caused k8s dynamic PVC provision to get into a weird state, necessitating some force-deletion of PVCs and pods, meaning that my Gitea install's Redis cluster got into a broken state[^redis], so it's taken the better part of my entire Sunday evening to even be able to publish this post[^publish].
 
 Nobody ever said that self-hosting was easy 😝
 

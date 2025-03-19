@@ -40,4 +40,5 @@ jobs:
 
       - name: Revoke GitHub token
         run: |
-          curl -H "Authorization: Bearer ${{ env.GITHUB_TOKEN }}" -X DELETE https://api.github.com/installation/token
+          curl -s -H "Authorization: Bearer ${{ env.GITHUB_TOKEN }}" -X DELETE https://api.github.com/installation/token
+          echo "Token revoked"

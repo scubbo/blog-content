@@ -36,7 +36,7 @@ The relevant part of the original layout looks like[^line-numbers] this:
 ...
 ```
 
-Although the [where function](https://gohugo.io/functions/collections/where) does have a pretty good selection of operators, there's no `not` or `not intersection` - so, although it's possible to [filter to all members which have a particular slice-term contained in some other slice](https://gohugo.io/functions/collections/where/#intersection-comparison), it's not immediately possible to find all members that _don't_ have a given value in a slice-term. Thankfully, [later in the same docs](https://gohugo.io/functions/collections/where/#inequality-test) there's a link to [`collections/complement`](https://gohugo.io/functions/collections/complement/), which does exactly what I want. The final result was:
+Although the [where function](https://gohugo.io/functions/collections/where) does have a pretty good selection of operators, there's no `not` or `not intersection` - so, although it's possible to [filter to all members which have a particular slice-term contained in some other slice](https://gohugo.io/functions/collections/where/#intersection-comparison), it's not immediately possible to find all members that _don't_ have a given value in a slice-term. Thankfully, [later in the same docs](https://gohugo.io/functions/collections/where/#inequality-test) there's a link to [`collections/complement`](https://gohugo.io/functions/collections/complement/), which does exactly what I want. The final result[^commit] was:
 
 ```
 ...
@@ -49,3 +49,4 @@ Although the [where function](https://gohugo.io/functions/collections/where) doe
 Since I don't want those weeknotes to be undiscoverable, though, I also added a dedicated section for them on the homepage. Pretty happy with how that turned out!
 
 [^line-numbers]: Hmm, note to self for a TODO - automatically adding line-numbers into monospace blocks would be nice!
+[^commit]: See the actual commit [here](https://gitea.scubbo.org/scubbo/blogcontent/commit/2220b539ea9e6d61117bc72fe371b3544515e732)!

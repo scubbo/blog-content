@@ -3,8 +3,10 @@ title: "Weeknotes: 2025-04-06"
 date: 2025-04-06T21:50:46-07:00
 tags:
   - CI/CD
+  - EDH-ELO
   - Gitea
   - Vault
+  - Vercel
   - Weeknotes
 
 ---

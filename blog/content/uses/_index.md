@@ -33,7 +33,7 @@ This is a ["Uses" page](https://uses.tech/), detailing some of the tools and oth
 
 ### Hardware
 
-* Three Raspberries Pi, and a PowerEdge R430 that I got cheap and refurbished thanks to a tip from a friend.
+* Three Raspberries Pi, a PowerEdge R430 that I got cheap and refurbished thanks to a tip from a friend, and another PE R430 that I bought off that same friend when he moved from the Bayeria to New York City.
 * [iX Systems](https://www.ixsystems.com/) [TrueNAS R-Series](https://www.truenas.com/r-series/), 64GB RAM, 1x1.9TB SSD, 7x6TB HDD, 4xEmpty for expansion. Probably overkill, but I'd rather give myself some room to grow than have to deal with data migrations and repooling regularly!
 * [Sysracks 12U 35" Rack](https://www.amazon.com/gp/product/B09KK678CN).
 * [Quotom Mini PC](https://qotom.net/) w/ 8GB RAM, 64GB SSD, running [OPNSense](https://opnsense.org/) as Firewall and Router
@@ -41,13 +41,16 @@ This is a ["Uses" page](https://uses.tech/), detailing some of the tools and oth
 
 ### Software
 
+#### Utilities/Infrastructure
+
 * [k3s](https://k3s.io/) is a super-simple way to install a Kubernetes cluster on "_something as small as a Raspberry Pi_". I'm sure it's probably missing some of the bells-and-whistles of the more fully-featured installations, but I've never hit any limitations that mattered to me. You can see the setup in the [pi-tools](https://github.com/scubbo/pi-tools/tree/main/scripts-on-pi)[^out-of-date-naming] repo that I use to configure my homeserver. Configuration and installation is [just these two lines](https://github.com/scubbo/pi-tools/blob/main/scripts-on-pi/controller_setup/1.sh#L67-L70), though there are another 70 or so lines of installing convenience resources (which I should really migrate to a full GitOps location, but eh, who has the time?)
   * [Helm](https://helm.sh/) and [ArgoCD](https://argo-cd.readthedocs.io/en/stable/) are invaluable for defining and deploying Kubernetes applications, respectively.
   * I have really enjoyed what tinkering I've done with [cdk8s](https://cdk8s.io/) for Infrastructure-As-Code, but haven't used it in earnest yet. I have been able to use some [jsonnet](https://jsonnet.org/) to achieve some [pretty terse application definitions](https://gitea.scubbo.org/scubbo/helm-charts/src/branch/main/app-of-apps/edh-elo.jsonnet), though.
+  * [`democratic-csi`](https://github.com/democratic-csi/democratic-csi) is an astonishingly "plug-and-play" dynamic storage provider for Kubernetes. With the exception of the one time I had to restart all the pods when they got into a funky state after a power outage took down the whole cluster, I often forget that it's there.
 * [Gitea](https://about.gitea.com/) as my [Git forge](https://gitea.scubbo.org); hosting repos and Docker images, and executing workflows with [Gitea Actions](https://docs.gitea.com/usage/actions/overview)
-* [Vault](https://www.hashicorp.com/en/products/vault) for Secrets management
+* [Vault](https://www.hashicorp.com/en/products/vault) for Secrets management (See [here]({{< ref "/tags/vault" >}}) for some examples of what I've done with it!)
 
-More detail to follow! TL;DR - Grafana, OpenProject, Jellyfin, Crossplane, [democratic-csi](https://github.com/democratic-csi/democratic-csi), KeyCloak, HomeAssistant.
+More detail to follow! TL;DR - Grafana, OpenProject, Jellyfin, Crossplane, KeyCloak, HomeAssistant.
 
 [^ai-optin]: Yes, I know it was opt-in. It still indicates decision-making that I don't want to support.
 [^out-of-date-naming]: the naming is somewhat out-of-date, since I've added a non-Pi PowerEdge to the cluster - but hey, all engineers know there's nothing to permanent as a temporary name!

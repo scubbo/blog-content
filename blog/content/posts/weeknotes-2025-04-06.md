@@ -19,14 +19,3 @@ Thankfully, the bulk of the work of adding OIDC tokens to Gitea Actions had alre
 Other than that:
 * I've been enjoying playing around with [Vercel](https://vercel.com/home)/[Next.js](https://nextjs.org/) after a highly-respected ex-colleague recommended them (hi Dustin!)
 * I've put a bit more effort into "EDH ELO", the [webtool I've been tinkering with](https://gitea.scubbo.org/scubbo/edh-elo) to rank my Magic: The Gathering Commander playgroup's decks from match results. Kinda tempted to combine the two and "_Rewrite It In ~~Rust~~React_" :P
-
-<!--
-Reminders of patterns you often forget:
-
-Images:
-![Alt-text](url "Caption")
-
-Internal links:
-[Link-text](\{\{< ref "/posts/name-of-post" >}})
-(remove the slashes - this is so that the commented-out content will not prevent a built while editing)
--->

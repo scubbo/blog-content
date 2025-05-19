@@ -1,5 +1,5 @@
-name: Gitea Actions Demo
-run-name: ${{ gitea.actor }} is testing out Gitea Actions! 🚀
+name: Publish
+# run-name: ${{ gitea.actor }} is testing out Gitea Actions! 🚀
 on: [push]
 
 jobs:
@@ -86,7 +86,6 @@ jobs:
       # Seems insecure - and it is! - but this is literally recommended by the Kustomize docs
       - name: Install kustomize
         run: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
-
 
       - name: Update deployment
         run: |

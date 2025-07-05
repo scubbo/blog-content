@@ -6,6 +6,7 @@ tags:
   - homelab
   - k8s
   - observability
+  - Starting-Over
 
 ---
 Observant readers of this blog, refreshing every day desperate for new content, will have noticed that the last blog post - dated 2022-12-31 - actually went live in the middle of January. My k3s cluster, which had always been a bit rickety, finally gave up the ghost in late December, and two of the nodes needed to be fully reimaged before I could start it back up again.  
@@ -56,6 +57,10 @@ I'd spent *ages* trying to get [Grafana Oncall](https://github.com/grafana/oncal
 Until one night I was poking around and found that vanilla Grafana has the ability to send Telegram alerts directly. Given that I'm just a single person (who doesn't need oncall rotation support), this is perfectly fine for my needs!
 
 That said, recent changes have meant that Oncall is now [easier to set up](https://github.com/scubbo/pi-tools/tree/898c06d7c5193d1b7716dde4ba5c572f88de21bb/k8s-objects/helm-charts/grafana-oncall) than I had [previously found]({{< ref "/posts/grafana-oncall" >}}) - RabbitMQ clusters can now be run directly from the Helm chart on an `arm64` machine rather than having to install them separately, for instance! Still, though - not worth it for a single-operator system.
+
+# UPDATE: A note from the future
+
+This update delivered approximately 29 months later - [all of this has happened before, and all of it will happen again. Once more, we return]({{< ref "/posts/a-new-start" >}})
 
 [^tunnel-article]: Referenced previously [here]({{< ref "/posts/cloudflare-tunnel-dns" >}}), and inspired by [this article](https://eevans.co/blog/garage/)
 [^docker-in-docker]: I guess this would probably require running Docker-in-Docker, since I don't think it's possible to tell Kubernetes "_This initContainer doesn't matter, don't fail if you can't fetch the image_" - so I'd have to run a standard image which _itself_ tries to download-and-run the DNS-setting image, but fails gracefully if it can't do so.

@@ -66,7 +66,10 @@ I experimented with [Longhorn](https://longhorn.io/) a couple of years back and 
 
 # Next priorities
 
-* Jellyfin. The only service that matters, as far as the rest of my household's concerned!
+* ~~Jellyfin. The only service that matters, as far as the rest of my household's concerned!~~ [Done](https://github.com/scubbo/homelab-configuration/blob/main/app-of-apps/jellyfin.jsonnet).
+  * A _very_ important prerequisite for that, which I'm glad I remembered first - installing the TrueNAS-linked Storage Classes! Thankfully, that was pretty easy - I just followed the instructions linked from the main GitHub (explicitly - [this](https://jonathangazeley.com/2021/01/05/using-truenas-to-provide-persistent-storage-for-kubernetes/) (though that was mostly about setting up TrueNAS itself, which I didn't have to do this time around) and [this](https://www.lisenet.com/2021/moving-to-truenas-and-democratic-csi-for-kubernetes-persistent-storage/)). I had to do a bit of finangling on the config - see everything from [here](https://github.com/scubbo/homelab-configuration/commit/de75548c2086b209e7787473cdb192c983c6dce8) to [here](https://github.com/scubbo/homelab-configuration/commit/71894685230d4e09371159e8ff0d1bdad17b5945) - but not too much.
+  * Interestingly, after Jellyfin was set up, it consistently asked me for a password when I hit it via Domain Name or `k port-forward` to the service, but when I got in with a direct port-forward _to the pod_ the wizard ran fine. Odd! I guess it makes sense for that to be blocked from non-local addresses, though - shouldn't be giving arbitrary people setup permissions just because you accidentally left it exposed on reinstall!
+  * One slight hiccup in that the config directory for my Jellyfin library contains metadata _for_ the library - so, with my digital-packrat tendencies, required a larger PV than the `100M` I'd originally allocated. Weird flex, but I'll take it.
 * Backups of data from the k3s HA postgres database. It would be ironic and frustrating to lose this cluster in a similar way to the previous one!
 * Double-checking backups from the TrueNAS. I get regular confirmations that they're _running_, but you know what they say about untested backups...
 * A [LetsEncrypt Cert Resolver](https://doc.traefik.io/traefik/https/acme/#certificate-resolvers)[^cluster-issuer]

@@ -80,7 +80,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: scubbo/blog-deployment
-          token: ${{ secrets.PAT_FOR_GITHUB_ACCESS }}
+          token: ${{ secrets.DEPLOYMENT_PUBLISH_TOKEN }}
 
       # Seems insecure - and it is! - but this is literally recommended by the Kustomize docs
       - name: Install kustomize

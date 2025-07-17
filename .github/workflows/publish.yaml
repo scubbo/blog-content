@@ -11,7 +11,6 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     steps:
-
       - name: Check out repository code
         uses: actions/checkout@v4
 
@@ -72,10 +71,19 @@ jobs:
             ghcr.io/scubbo/blog-content:${{ github.sha }}
 
   update-deployment-repo:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted # Necessary so it can access Vault
     needs:
       - build-and-push
     steps:
+      - name: Fetch GitHub token
+        uses: hashicorp/vault-action@v2
+        with:
+          url: http://vault.avril
+          method: jwt
+          role: blog-publish
+          secrets: |
+            github/token?org_name=scubbo&repositories=blog-deployment token | DEPLOYMENT_PUBLISH_TOKEN ;
+
       - name: Check out deployment repo
         uses: actions/checkout@v4
         with:

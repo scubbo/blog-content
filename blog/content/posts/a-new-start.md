@@ -78,7 +78,7 @@ I experimented with [Longhorn](https://longhorn.io/) a couple of years back and 
 * Automation (probably via [Operators](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/), which I haven't yet played with; or [Crossplane](https://www.crossplane.io/), which I have, and love) for:
   * Updates on my router's UnboundDNS for certain Ingresses[^no-wildcard]
   * per-service Cloudflared tunnel
-* Reinstallation of [Vault](https://www.hashicorp.com/en/products/vault) and the [GitHub Token Plugin](https://martin.baillie.id/wrote/ephemeral-github-tokens-via-hashicorp-vault/) - I've hard-coded a secret to allow this blog's CD pipeline to succeed, but I don't want to do that any more than once. I'm _really_ hoping that the installation will magically come right back up again, pre-configured, when I reconnect to the PVC - fingers crossed...
+* ~~Reinstallation of [Vault](https://www.hashicorp.com/en/products/vault) and the [GitHub Token Plugin](https://martin.baillie.id/wrote/ephemeral-github-tokens-via-hashicorp-vault/) - I've hard-coded a secret to allow this blog's CD pipeline to succeed, but I don't want to do that any more than once. I'm _really_ hoping that the installation will magically come right back up again, pre-configured, when I reconnect to the PVC - fingers crossed...~~ (Spoiler alert - [it didn't...]({{< ref "/posts/authentication-in-the-new-world" >}}))
 * Monitoring. [Grafana]({{< ref "/tags/observability" >}}) was one of the first systems I tried to install on the Homelab, but newbie that I was, I couldn't really get my head around it[^datadog].
 
 

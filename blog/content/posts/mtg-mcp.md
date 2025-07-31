@@ -190,6 +190,18 @@ I think I'm already on record as saying this, but, for the avoidance of doubt - 
 
 ...Sadly, [Suncrusher](https://gatherer.wizards.com/5DN/en-us/159/suncrusher)'s ability requiring it to tap means it's probably not as good as [Triskelion](https://scryfall.com/card/moc/387/triskelion), which can also function as Player Removal. Ah well!
 
+# Next Steps
+
+I'm kinda interested if I can extend this to answer questions about the MTG rules, which are famously well-codified. I'm admittedly pretty fuzzy on LLM tech terms, but I _think_ the following statements are true:
+* The most straightforward way to do so would be to just load the [comprehensive rules](https://magic.wizards.com/en/rules) into "context", and have an LLM operate directly on that
+* But the "context window" of LLMs is finite, with most popular models having windows of a few thousand to several hundred thousand tokens (Magic.dev's LTM-2-Mini apparently supporting up to 100 million)
+* The [rule of thumb](https://old.reddit.com/r/LocalLLaMA/comments/176u53g/is_the_075_tokens_per_word_rule_of_thumb_general/) is 0.75 words per token
+* The Comp Rules are 157k words, so ~209k tokens, so by no means guaranteed to fit in the context window
+* So, instead, an MCP server that provides lookup capability on the Comp Rules would act like as quasi-[RAG](https://en.wikipedia.org/wiki/Retrieval-augmented_generation), allowing the LLM to look up information as it sees fit.
+  * There are more sophisticated and direct ways of providing context via RAG, but they're not so easy to implement!
+
+And then of course I'd need to host it somewhere, and connect it to my playgroup's Discord...
+
 [^whats-mcp]: [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) is "_an open protocol that standardizes how applications provide context to large language models (LLMs)_". It's essentially an API syntax allowing LLMs to interface with other systems - MCP servers can list the "tools" that are available to an LLM, and provide a standardized way for it to use them.
 [^land-destruction]: Friends don't let friends destroy lands.
 [^timespan]: And that was with plenty of distraction - I think I could have got it done in 15 minutes if I'd have been focused

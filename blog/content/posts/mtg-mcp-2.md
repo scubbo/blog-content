@@ -191,6 +191,8 @@ I'm still pretty interested in setting up a Rules Lawyer bot for my group's Disc
 * Extract a "question" and an "answer"
 * Put the question to a model with these MCP tools, and evaluate the answer for correctness
 
+Or I can just keep tinkering with my [EDH ELO](https://edh-elo-nextjs.vercel.app/) site :shrug:
+
 [^grouped]: For simplicity, I grouped all sub-rules together - so, if you wanted `705.2a`, the LLM will have to just request the text for `705` and parse through it - but at the scale I'm dealing with, that amount of extra context shouldn't be a problem, I guess? More-efficient indexing would improve performance if necessary.
 [^top-level]: If any AI gurus are reading this, I'm curious - is there a cost associated with putting detailed usage instructions in MCP tool descriptions? Does it use up extra context?
 [^control]: As a control group, I tried asking these same questions to `claude` without the MCP. It was able to describe the Stack correctly, and answered the second question basically (but without the extension part). On the Gitrog Monster question it made the expected error of assuming that the GM regained its ability before discard, and [ChatGPT makes the same mistake](https://chatgpt.com/c/68e5f735-b758-8328-bfd3-b02f61c99ff2).

@@ -41,4 +41,7 @@ I know I keep saying I'm going to get backups of the Postgres database for my HA
 
 I did toy with the idea of trying to complete Factorio: Space Age over this weekend to twofer two of my favourite games, but realized there's still a _significant_ chunk of content post-Aquilo (gotta adapt to biolabs first!), so...that'll keep me going for the rest of the year, at least! Plus I do wanna 100% Silksong.
 
+My wife bought me some Google Pixel Buds as a gift. The voice integration with Gemini is interesting - potentially enough of a prompt[^pun] to finally get [Rhasspy](https://rhasspy.readthedocs.io/en/latest/) installed at home. Not quite the same thing, I know, but still.
+
 [^extension]: Or, eventually, click a browser extension while on the appropriate page
+[^pun]: No pun intended - but also, no pun ever knowingly deleted

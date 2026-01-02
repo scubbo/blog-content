@@ -110,9 +110,9 @@ A slight cheat, as I read this today - but it makes sense to include it here.
 A few through-lines I notice in these articles
 
 * 4 (Rice Knuckle, Juggler's, Experts Have It Easy, You're A Crazy Person, TGTWWPTM) on "_people do not perceive themselves or their competency accurately_"
+* 4 ("All Nuts", TGTWWPTM, Altoids, Simon's) on AI
 * 3 (Rice Knuckle, Blub Work, Juggler's Curse) on "_giving a name to a phenomenon so as to make it easier to talk about_"
 * 3 (Rice Kunckle, Tribes, Experts Have It Easy) on how communication can break down because of unspoken assumptions
-* 3 ("All Nuts", TGTWWPTM, Altoids, Simon's) on AI
 * 2 (Rice Knuckle, Seeing Like A Software Company) on "_Systems do not actually work the way that they claim to_"
 * 2 (3 Tribes, Good Engineers Write Bad Code) on "_the market rewards extant bad code over unreleased good code (and employers proxy-through rewards of the market)_" (to be fair, 3 Tribes doesn't itself hold this position - but the last tribe of engineers would)
 

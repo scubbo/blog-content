@@ -7,6 +7,7 @@ tags:
   - authentik
   - sso
   - argocd
+  - written-by-ai
 
 ---
 Remember when I [set up Keycloak for SSO]({{< ref "/posts/oidc-on-k8s" >}})? Well, I've [switched to Authentik](https://github.com/scubbo/homelab-configuration/commit/9b8bffe6ea8b16a5ea54f6cd25fee3b82bd8986f), and it was surprisingly painless.

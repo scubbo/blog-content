@@ -6,6 +6,7 @@ tags:
   - homelab
   - k8s
   - networking
+  - opnsense
   - linux
   - adguard
   - written-by-ai

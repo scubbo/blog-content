@@ -1,7 +1,6 @@
 ---
 title: "Weeknotes 2026-04-12"
 date: 2026-04-12T22:39:55-07:00
-draft: true
 tags:
   - MentalHealth
   - Real-Life

@@ -67,28 +67,19 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            ghcr.io/scubbo/blog-content:latest  
+            ghcr.io/scubbo/blog-content:latest
             ghcr.io/scubbo/blog-content:${{ github.sha }}
 
   update-deployment-repo:
-    runs-on: self-hosted # Necessary so it can access Vault
+    runs-on: ubuntu-latest
     needs:
       - build-and-push
     steps:
-      - name: Fetch GitHub token
-        uses: hashicorp/vault-action@v2
-        with:
-          url: http://vault.avril
-          method: jwt
-          role: blog-publish
-          secrets: |
-            github/token?org_name=scubbo&repositories=blog-deployment token | DEPLOYMENT_PUBLISH_TOKEN ;
-
       - name: Check out deployment repo
         uses: actions/checkout@v4
         with:
           repository: scubbo/blog-deployment
-          token: ${{ env.DEPLOYMENT_PUBLISH_TOKEN }}
+          token: ${{ secrets.BLOG_DEPLOYMENT_PAT }}
 
       # Seems insecure - and it is! - but this is literally recommended by the Kustomize docs
       - name: Install kustomize
@@ -96,12 +87,21 @@ jobs:
 
       - name: Update deployment
         run: |
+          git checkout -b update-blog-content-${{ github.sha }}
           ./kustomize edit set image image_name=*:${{ github.sha }}
 
-      - name: Commit and push
+      - name: Commit and open PR
+        env:
+          GH_TOKEN: ${{ secrets.BLOG_DEPLOYMENT_PAT }}
         run: |
           git config --global user.email "auto-updater@scubbo.org"
           git config --global user.name "UpdaterBot"
           git add --all -- ':!kustomize'
-          git commit -m "Update blog content to ${{ github.sha}}"
-          git push
+          git commit -m "Update blog content to ${{ github.sha }}"
+          git push origin update-blog-content-${{ github.sha }}
+          gh pr create \
+            --repo scubbo/blog-deployment \
+            --title "Update blog content to ${{ github.sha }}" \
+            --body "Automated image update from blog-content push ${{ github.sha }}." \
+            --base main \
+            --head update-blog-content-${{ github.sha }}

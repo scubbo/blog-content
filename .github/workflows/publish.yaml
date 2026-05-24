@@ -83,7 +83,7 @@ jobs:
 
       # Seems insecure - and it is! - but this is literally recommended by the Kustomize docs
       - name: Install kustomize
-        run: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+        run: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" | bash -s -- 5.8.1
 
       - name: Update deployment
         run: |

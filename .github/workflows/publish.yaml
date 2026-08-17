@@ -1,5 +1,8 @@
 name: Publish
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -75,11 +78,23 @@ jobs:
     needs:
       - build-and-push
     steps:
+      - name: Mint deployment token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: Iv23linrv3EjCnSWuWoS
+          private-key: ${{ secrets.DEPLOYMENT_APP_PRIVATE_KEY }}
+          owner: scubbo
+          repositories: blog-deployment
+          # Revocation is handled by the explicit step at the end of this job, so that the
+          # token dies at its last point of use rather than whenever the job happens to end.
+          skip-token-revoke: true
+
       - name: Check out deployment repo
         uses: actions/checkout@v4
         with:
           repository: scubbo/blog-deployment
-          token: ${{ secrets.BLOG_DEPLOYMENT_PAT }}
+          token: ${{ steps.app-token.outputs.token }}
 
       # Seems insecure - and it is! - but this is literally recommended by the Kustomize docs
       - name: Install kustomize
@@ -87,21 +102,21 @@ jobs:
 
       - name: Update deployment
         run: |
-          git checkout -b update-blog-content-${{ github.sha }}
           ./kustomize edit set image image_name=*:${{ github.sha }}
 
-      - name: Commit and open PR
-        env:
-          GH_TOKEN: ${{ secrets.BLOG_DEPLOYMENT_PAT }}
+      - name: Commit and push
         run: |
           git config --global user.email "auto-updater@scubbo.org"
           git config --global user.name "UpdaterBot"
           git add --all -- ':!kustomize'
           git commit -m "Update blog content to ${{ github.sha }}"
-          git push origin update-blog-content-${{ github.sha }}
-          gh pr create \
-            --repo scubbo/blog-deployment \
-            --title "Update blog content to ${{ github.sha }}" \
-            --body "Automated image update from blog-content push ${{ github.sha }}." \
-            --base main \
-            --head update-blog-content-${{ github.sha }}
+          git push
+
+      # Runs even when an earlier step failed, so a mid-job failure cannot leave a usable
+      # token behind for the remainder of its hour-long lifetime. Skipped if minting itself
+      # failed, since there would be no token to revoke.
+      - name: Revoke deployment token
+        if: always() && steps.app-token.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: gh api --method DELETE /installation/token

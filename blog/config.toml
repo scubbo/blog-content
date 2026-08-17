@@ -10,6 +10,10 @@ SectionPagesMenu = "main"
   identifier = 'tags'
   name = 'Tags'
   url = '/tags/'
+[[menu.main]]
+  identifier = 'hills'
+  name = 'Hills'
+  url = '/hills/'
 
 [params]
   twitter = "https://twitter.com/jacksquaredson"

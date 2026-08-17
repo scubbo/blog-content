@@ -1,0 +1,22 @@
+{{/* This file was copied from the Ananke definition in order to let the article fill
+     the width its wrapper allows, so that prose on a standalone page reads at the same
+     column width as prose in a post.
+
+     The max-width deliberately lives on the wrapping div rather than on the article:
+     `custom.js` widens the first `article` element carrying `mw8`, and at this nesting
+     that would take the column far past the width a post uses. */}}
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
+{{ define "main" }}
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns">
+      <header>
+        <h1 class="f1">
+          {{ .Title }}
+        </h1>
+      </header>
+      <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | default "mid-gray" }}">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+{{ end }}

@@ -16,3 +16,4 @@ A [slash-page](https://slashpages.net/#hills) listing hills I will ~~die~~ live 
   * "_I feel badly for you_" (for "_I empathise_") is nonsense that should parse as "_I am incompetent at feeling_". We don't say "_I feel well_" or "_I feel guiltily_" - an adverb is not appropriate here.
   * More examples to follow, I'm sure.
 * The resposibility for notification management is with the recipient. A sender should never feel the need to delay sending a message "_so as not to wake them_".
+* Every SNL skit I've seen has been deeply unfunny, and it's astonishing that so incredible a TV Show as 30 Rock arose from it.

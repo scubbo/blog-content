@@ -17,3 +17,11 @@ A [slash-page](https://slashpages.net/#hills) listing hills I will ~~die~~ live 
   * More examples to follow, I'm sure.
 * The resposibility for notification management is with the recipient. A sender should never feel the need to delay sending a message "_so as not to wake them_".
 * Every SNL skit I've seen has been deeply unfunny, and it's astonishing that so incredible a TV Show as 30 Rock arose from it.
+
+# Food-based takes
+
+* Tacos are the more overrated food delivery mechanism. Which does _not_ mean that they're bad - just that the diff between "_how much people like them_" and "_how good they actually are_" is the largest. If you took the fillings of a good taco, and put it in a fajita or a burrito - something more enclosed - it would be a strictly-better-experience.
+* Claims that "_American cuisine is better than British_" are made unfairly - proponents usually compare "_food that is native to England_" to "_food that can be found anywhere in the USA_". If you get to count burritos, pizza[^pizza], and pad thai, then we should be able to similarly claim fusions from Indian, Chinese, and other cultures.
+  * To be clear - American cuisine still _is_ arguably better than British, but not by anywhere near as much as is claimed by the uneven comparison. We've got you beat on cheese and beer, at least!
+
+[^pizza]: Yeah yeah, I know about Tomatoes being a New World crop. That's kind-of my point exactly!

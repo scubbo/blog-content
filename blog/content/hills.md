@@ -17,6 +17,8 @@ A [slash-page](https://slashpages.net/#hills) listing hills I will ~~die~~ live 
   * "_More so_" is a grammatically-meaningful phrase - "_in the way already described, but to a greater extent_". It doesn't just mean "_rather_", it's not just fancier way of saying "_more_". "_The problem wasn't traffic, but more so tolls_" is nonsense; "_Sam was a talented violinist, and Alex more so_" makes sense.
 * The resposibility for notification management is with the recipient. A sender should never feel the need to delay sending a message "_so as not to wake them_".
 * Every SNL skit I've seen has been deeply unfunny, and it's astonishing that so incredible a TV Show as 30 Rock arose from it.
+* Listening to audiobooks isn't reading - *but* that doesn't make it any less worthwhile, educational, worthy, or virtuous (which is what I think the disagreement is usually _really_ about).
+* Advertizing is an overwhelming net-negative on the world - we'd be better off if it was banned[^advertizing].
 
 # Food-based takes
 
@@ -27,3 +29,4 @@ A [slash-page](https://slashpages.net/#hills) listing hills I will ~~die~~ live 
 
 [^pizza]: Yeah yeah, I know about Tomatoes being a New World crop. That's kind-of my point exactly!
 [^service]: I've only ever worked service in a physical restaurant, and only ever front-of-house, so it's possible that there are genuine issues with this belief that I'm unaware of. I'm not selfishly expecting service staff to cater to my needs, but just assuming that published expectations are actually accurate; but if that's unrealistic in some way, please let me know!
+[^advertizing]: I acknowledge that there is no practical way of doing so, and that incentives would encourage corporations to seek out and exploit loopholes. Doesn't change my conviction that the less advertizing exists, the better.

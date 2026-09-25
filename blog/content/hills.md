@@ -20,6 +20,7 @@ A [slash-page](https://slashpages.net/#hills) listing hills I will ~~die~~ live 
 * Listening to audiobooks isn't reading - *but* that doesn't make it any less worthwhile, educational, worthy, or virtuous (which is what I think the disagreement is usually _really_ about).
 * Advertizing is an overwhelming net-negative on the world - we'd be better off if it was banned[^advertizing].
 * (Spoilers for Mass Effect trilogy) {{< inlinespoiler >}}The ending of the trilogy is not only perfectly fine, it's also totally in-keeping with everything that came before. Despite its much-vaunted choice-based narrative, the _overall_ arc of the games always followed the same route. You always got to the same story beats, there was just different flavouring in how you got there. Three "_differently-flavoured_" endings is entirely on-brand!{{< /inlinespoiler >}}
+* The first day of the week is Monday. Saturday and Sunday are "_the weekend_", not "_the week ends_".
 
 # Food-based takes
 
